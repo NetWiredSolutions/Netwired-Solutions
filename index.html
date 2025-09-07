@@ -277,7 +277,10 @@
           </div>
           <div class="md:w-1/2 mt-8 md:mt-0">
             <!-- EITHER keep the JS version below OR use pure HTML post (commented line). -->
-            <form id="inquiryForm" class="space-y-4">
+            <form id="inquiryForm" class="space-y-4" method="POST" action="https://formspree.io/f/mrbarybo">
+  <input type="hidden" name="_subject" value="New inquiry from NetWired Solutions">
+  <input type="text" name="_gotcha" style="display:none"> <!-- spam trap -->
+
               <!-- For pure HTML posting, replace the line above with:
               <form id="inquiryForm" class="space-y-4" method="POST" action="https://formspree.io/f/your-id">
               -->
@@ -384,21 +387,4 @@
       });
     });
 
-    // Form submission via Formspree  --- REPLACE with your endpoint
-    const form = document.getElementById('inquiryForm');
-    const formMsg = document.getElementById('formMsg');
-    const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-id"; // <-- replace
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      formMsg.textContent = "Sending...";
-      const data = new FormData(form);
-      try {
-        const res = await fetch(FORMSPREE_ENDPOINT, { method: "POST", headers: { "Accept": "application/json" }, body: data });
-        if (res.ok) { formMsg.textContent = "Thanks. We will get back to you shortly."; form.reset(); }
-        else       { formMsg.textContent = "There was a problem. Try again or email contactnetwiredsolutions@gmail.com"; }
-      } catch { formMsg.textContent = "Network error. Please try again."; }
-    });
-  </script>
-</body>
-</html>
+   
