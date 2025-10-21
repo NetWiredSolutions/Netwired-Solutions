@@ -430,14 +430,23 @@
       idx = (idx + 1) % slides.length;
     }, 3800);
 
-    // FAQ accordion
-    document.querySelectorAll('.faq').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const ans = btn.parentElement.nextElementSibling;
-        ans.classList.toggle('hidden');
-      });
-    });
-  </script>
+    <script>
+/* FAQ accordion — paste this at the bottom, replace the old FAQ script */
+document.querySelectorAll('.faq').forEach((btn) => {
+  const ans = btn.nextElementSibling; // the answer div is the next sibling of the button
+  if (!ans) return;
+
+  // start closed
+  ans.classList.add('hidden');
+  btn.setAttribute('aria-expanded', 'false');
+
+  btn.addEventListener('click', () => {
+    const isHidden = ans.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isHidden));
+  });
+});
+</script>
+
 
   <!-- Watermark script removed -->
   <!-- <script src="https://deepsite.hf.co/deepsite-badge.js"></script> -->
