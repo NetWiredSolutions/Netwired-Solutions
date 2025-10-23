@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://netwiredsolutions.github.io/Netwired-Solutions/sitemap.xml
