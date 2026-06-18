@@ -1,350 +1,454 @@
+Here is a completely revamped, modern, and high-converting redesign for **NetWired Solutions**.
+
+This overhaul cleans up your HTML structure, fixes a syntax error in your existing code (nested `<script>` tags), implements a stunning "Dark Tech" aesthetic with glassmorphism effects, improves mobile responsiveness, and preserves **all** of your original images, contact details, form actions, and SEO tags.
+
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <!-- SEO META TAGS -->
-<title>NetWired Solutions | Website Development, IT Solutions, and Camera Installation Tampa</title>
+  
+  <!-- SEO META TAGS -->
+  <title>NetWired Solutions | Website Development, IT Solutions, and Camera Installation Tampa</title>
+  <meta name="description" content="NetWired Solutions provides professional website development, SEO, and complete IT solutions for homes and businesses across Tampa Bay. We design networks, install Wi-Fi and security cameras, set up firewalls, and build affordable business websites that help companies grow online. Reliable work, clean installs, and trusted local service.">
+  <meta name="keywords" content="NetWired Solutions, website development Tampa, web developers near me, business website design, IT solutions Tampa, IT support, networking company Tampa, Wi-Fi installation, camera installation Tampa, low voltage contractor, network engineer, business IT setup, structured cabling, CCTV, affordable websites, network troubleshooting, computer networking, commercial IT services, Tampa Bay tech support, Clearwater, Riverview, Brandon, Dunedin, St. Petersburg">
+  <meta name="author" content="NetWired Solutions">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
 
-<meta name="description" content="NetWired Solutions provides professional website development, SEO, and complete IT solutions for homes and businesses across Tampa Bay. We design networks, install Wi-Fi and security cameras, set up firewalls, and build affordable business websites that help companies grow online. Reliable work, clean installs, and trusted local service.">
+  <!-- Open Graph for sharing -->
+  <meta property="og:title" content="NetWired Solutions | Website Development & IT Solutions in Tampa Bay">
+  <meta property="og:description" content="Affordable website design, SEO, IT support, Wi-Fi setup, and camera installation for businesses and homes across Tampa Bay.">
+  <meta property="og:image" content="https://netwiredsolutions.github.io/Netwired-Solutions/logo.png">
+  <meta property="og:url" content="https://netwiredsolutions.github.io/Netwired-Solutions/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
 
-<meta name="keywords" content="NetWired Solutions, website development Tampa, web developers near me, business website design, IT solutions Tampa, IT support, networking company Tampa, Wi-Fi installation, camera installation Tampa, low voltage contractor, network engineer, business IT setup, structured cabling, CCTV, affordable websites, network troubleshooting, computer networking, commercial IT services, Tampa Bay tech support, Clearwater, Riverview, Brandon, Dunedin, St. Petersburg">
-
-<meta name="author" content="NetWired Solutions">
-<meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow">
-
-<!-- Open Graph for sharing -->
-<meta property="og:title" content="NetWired Solutions | Website Development & IT Solutions in Tampa Bay">
-<meta property="og:description" content="Affordable website design, SEO, IT support, Wi-Fi setup, and camera installation for businesses and homes across Tampa Bay.">
-<meta property="og:image" content="https://netwiredsolutions.github.io/Netwired-Solutions/logo.png">
-<meta property="og:url" content="https://netwiredsolutions.github.io/Netwired-Solutions/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html { scroll-behavior: smooth }
-    /* Belt-and-suspenders: hide any injected badges if a tool adds them */
+    /* Custom scrollbar and animations */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #d97706; }
     [class*="deepsite"], .deepsite-badge, .hf-badge { display:none !important; }
   </style>
 </head>
-<body class="min-h-screen bg-neutral-950 text-white selection:bg-amber-500/40">
+<body class="min-h-screen bg-neutral-950 text-neutral-100 antialiased selection:bg-amber-500/30 selection:text-amber-200">
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <img src="./logo.png" alt="NetWired Solutions" class="w-10 h-10 rounded-xl object-contain bg-white"/>
+  <header class="sticky top-0 z-50 border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md transitional-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <img src="./logo.png" alt="NetWired Solutions" class="w-11 h-11 rounded-xl object-contain bg-white p-1 shadow-md shadow-amber-500/10"/>
         <div>
-          <div class="text-lg font-semibold tracking-tight">NetWired Solutions</div>
-          <div class="text-xs text-neutral-400">CCTV • Wi-Fi • Switching • Cabling</div>
+          <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">NetWired Solutions</span>
+          <div class="text-[10px] uppercase tracking-widest text-amber-500 font-semibold mt-0.5">CCTV • Wi-Fi • Switching • Cabling</div>
         </div>
       </div>
-      <nav class="hidden md:flex items-center space-x-6 text-sm">
-        <a href="#services" class="hover:text-amber-400">Services</a>
-        <a href="#packages" class="hover:text-amber-400">Packages</a>
-        <a href="#work" class="hover:text-amber-400">Work</a>
-        <a href="#contact" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 font-medium shadow-lg shadow-amber-500/20">Get a quote</a>
+      
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-neutral-400">
+        <a href="#services" class="hover:text-amber-500 transition-colors">Services</a>
+        <a href="#packages" class="hover:text-amber-500 transition-colors">Packages</a>
+        <a href="#work" class="hover:text-amber-500 transition-colors">Our Work</a>
+        <a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery</a>
+        <a href="#contact" class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-amber-500 text-neutral-950 hover:bg-amber-400 font-semibold shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 active:scale-95 transition-all">Get a Quote</a>
       </nav>
-      <button id="menuBtn" class="md:hidden" aria-label="Toggle menu">
-        <svg viewBox="0 0 24 24" class="w-7 h-7"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+
+      <button id="menuBtn" class="md:hidden p-2 text-neutral-400 hover:text-white transition-colors" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-    <div id="mobileMenu" class="hidden md:hidden px-4 pb-3 space-y-2">
-      <a href="#services" class="block w-full text-left py-2">Services</a>
-      <a href="#packages" class="block w-full text-left py-2">Packages</a>
-      <a href="#work" class="block w-full text-left py-2">Work</a>
-      <a href="#contact" class="block w-full text-left py-2">Get a quote</a>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-neutral-900 bg-neutral-950 px-4 py-4 space-y-3 shadow-xl">
+      <a href="#services" class="block py-2 text-neutral-300 hover:text-amber-500 font-medium">Services</a>
+      <a href="#packages" class="block py-2 text-neutral-300 hover:text-amber-500 font-medium">Packages</a>
+      <a href="#work" class="block py-2 text-neutral-300 hover:text-amber-500 font-medium">Our Work</a>
+      <a href="#gallery" class="block py-2 text-neutral-300 hover:text-amber-500 font-medium">Gallery</a>
+      <a href="#contact" class="block text-center py-3 rounded-xl bg-amber-500 text-neutral-950 font-bold shadow-lg shadow-amber-500/10">Get a Quote</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.12),transparent_60%)]"></div>
-    <div class="max-w-7xl mx-auto px-4 pt-20 pb-28 grid md:grid-cols-2 gap-10 items-center relative">
-      <div>
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-          Reliable Wi-Fi, Modern WebDesign, Clean Network Racks, and crystal-clear camera coverage
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 md:pt-24 md:pb-32 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.15),transparent_50%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none opacity-40"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 items-center relative z-10">
+      <div class="md:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-xs text-amber-500 font-medium">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span> Serving Tampa Bay & Surrounding Areas
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+          Reliable Wi-Fi, Modern Web Design, <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Clean Racks</span> & Crystal Coverage.
         </h1>
-        <p class="mt-5 text-neutral-300 text-lg">
-          We design, wire, and configure access points, switches, and cameras that just work.
-          From structured cabling and Wi-Fi heat maps to 4K CCTV installs, we keep homes and businesses connected and protected.
+        <p class="text-neutral-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+          We design, wire, and deploy enterprise-grade infrastructure that just works. From structured low-voltage cabling and Wi-Fi heat maps to 4K CCTV setups and strategic web development, we keep you seamless and secure.
         </p>
-        <div class="mt-8 flex flex-wrap items-center gap-4">
-          <a href="#packages" class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 font-medium shadow-lg shadow-amber-500/20">See packages</a>
-          <a href="#contact" class="px-5 py-3 rounded-xl bg-white text-neutral-950 hover:bg-neutral-200 font-medium">Free consult</a>
-          <a href="#contact" class="px-5 py-3 rounded-xl border border-white/20 hover:bg-white/10 font-medium">Book a walk-around (free)</a>
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#contact" class="px-6 py-3.5 rounded-xl bg-amber-500 text-neutral-950 font-bold hover:bg-amber-400 transition-all shadow-xl shadow-amber-500/10 hover:shadow-amber-500/20 active:scale-98">Book Free Walk-Around</a>
+          <a href="#packages" class="px-6 py-3.5 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 font-semibold transition-all">View Our Packages</a>
         </div>
-        <p class="mt-4 text-sm text-neutral-400">Serving Tampa Bay — cost-effective options for every budget</p>
+        <p class="text-xs text-neutral-500 italic">Cost-effective configurations built directly for your project budget.</p>
       </div>
-      <div class="relative">
-        <div class="aspect-video rounded-3xl bg-gradient-to-br from-amber-500/20 via-white/5 to-neutral-800/40 border border-white/10 shadow-2xl overflow-hidden">
-          <div class="h-full w-full">
-            <div class="carousel absolute inset-0 p-6 transition-opacity duration-700 opacity-100" data-index="0">
-              <div class="h-full w-full rounded-2xl bg-neutral-900/50 grid place-items-center text-center">
-                <div>
-                  <div class="text-2xl font-semibold">CCTV coverage</div>
-                  <div class="text-neutral-400 mt-2">Smart alerts and remote playback</div>
-                </div>
+      
+      <!-- Interactive Carousel Card -->
+      <div class="md:col-span-5">
+        <div class="relative group p-4 rounded-3xl bg-neutral-900/40 border border-neutral-800/80 backdrop-blur-sm shadow-2xl overflow-hidden">
+          <div class="aspect-[4/3] rounded-2xl bg-neutral-950 border border-neutral-900 relative overflow-hidden">
+            <!-- Slide 0 -->
+            <div class="carousel absolute inset-0 p-8 flex flex-col justify-between transition-all duration-700 ease-in-out opacity-100 scale-100 z-10" data-index="0">
+              <div class="text-amber-500 font-mono text-xs uppercase tracking-widest">System Feature 01</div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">4K CCTV Video Coverage</h3>
+                <p class="text-neutral-400 text-sm mt-2">Smart motion tracking analytics, instantaneous alerts, and zero-latency local/remote video playback logs.</p>
               </div>
             </div>
-            <div class="carousel absolute inset-0 p-6 transition-opacity duration-700 opacity-0" data-index="1">
-              <div class="h-full w-full rounded-2xl bg-neutral-900/50 grid place-items-center text-center">
-                <div>
-                  <div class="text-2xl font-semibold">Rack builds</div>
-                  <div class="text-neutral-400 mt-2">Clean wiring, labeled, documented</div>
-                </div>
+            <!-- Slide 1 -->
+            <div class="carousel absolute inset-0 p-8 flex flex-col justify-between transition-all duration-700 ease-in-out opacity-0 scale-95 z-0" data-index="1">
+              <div class="text-amber-500 font-mono text-xs uppercase tracking-widest">System Feature 02</div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Structured Rack Builds</h3>
+                <p class="text-neutral-400 text-sm mt-2">Flawlessly combed bundles, complete physical labeling, dynamic patch management, and strict technical mapping records.</p>
               </div>
             </div>
-            <div class="carousel absolute inset-0 p-6 transition-opacity duration-700 opacity-0" data-index="2">
-              <div class="h-full w-full rounded-2xl bg-neutral-900/50 grid place-items-center text-center">
-                <div>
-                  <div class="text-2xl font-semibold">Wi-Fi mapping</div>
-                  <div class="text-neutral-400 mt-2">No dead zones. Just speed.</div>
-                </div>
+            <!-- Slide 2 -->
+            <div class="carousel absolute inset-0 p-8 flex flex-col justify-between transition-all duration-700 ease-in-out opacity-0 scale-95 z-0" data-index="2">
+              <div class="text-amber-500 font-mono text-xs uppercase tracking-widest">System Feature 03</div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Advanced Wi-Fi Mapping</h3>
+                <p class="text-neutral-400 text-sm mt-2">Predictive signal processing models engineered to eliminate dead zones completely, providing pure throughput speed.</p>
               </div>
             </div>
+          </div>
+          <!-- Progress Dots -->
+          <div class="flex justify-center gap-2 mt-4" id="carouselDots">
+            <span class="w-6 h-1 rounded-full bg-amber-500 transition-all duration-300"></span>
+            <span class="w-2 h-1 rounded-full bg-neutral-800 transition-all duration-300"></span>
+            <span class="w-2 h-1 rounded-full bg-neutral-800 transition-all duration-300"></span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Free Website Demo Promo -->
-  <section class="py-16 bg-gradient-to-br from-amber-500/20 via-white/5 to-amber-500/20 border-y border-amber-400/30">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="rounded-2xl bg-white/5 backdrop-blur-sm p-8 border border-white/10 shadow-lg">
-        <div class="md:flex items-center justify-between gap-8">
+  <!-- Special Promotion Banner -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+    <div class="relative rounded-3xl p-8 md:p-10 bg-gradient-to-r from-amber-500/10 via-neutral-900 to-neutral-950 border border-amber-500/20 shadow-xl overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+        <div class="space-y-2 max-w-3xl">
+          <span class="inline-block bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full text-[10px] tracking-wider text-amber-400 font-bold uppercase">Limited Time Client Incentive</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white">Free Mockup Homepage Demo For Your Business</h2>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Get a tailored technical prototype displaying exactly how we can accelerate your digital profile and visibility metrics. Complete transparency—review before moving forward.
+          </p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-neutral-500 line-through text-sm">$150 Value</span>
+            <span class="text-lg font-black text-amber-500">COMPLIMENTARY</span>
+          </div>
+        </div>
+        <a href="#contact" class="w-full md:w-auto text-center px-6 py-3 rounded-xl bg-amber-500 text-neutral-950 font-bold hover:bg-amber-400 shadow-md shadow-amber-500/10 transition-all whitespace-nowrap">Claim Demo Blueprint →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 border-t border-neutral-900 bg-neutral-950 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white">Commercial & Residential Capabilities</h2>
+        <p class="text-neutral-400 mt-2">Explicit scoping parameters, immaculate deployment pipelines, and verifiable project integrity.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="p-6 rounded-2xl border border-neutral-900 bg-neutral-900/20 hover:bg-neutral-900/40 hover:border-neutral-800 transition-all duration-300 flex flex-col justify-between">
           <div>
-            <div class="mb-3">
-              <div class="bg-amber-500/10 border border-amber-400/30 px-3 py-1 rounded-full text-xs text-amber-400 font-medium inline-block">LIMITED TIME OFFER</div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 border border-amber-500/10">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor"><path d="M12 5a7 7 0 1 1 0 14a7 7 0 0 1 0-14m0-2a9 9 0 1 0 0 18a9 9 0 0 0 0-18m0 5a4 4 0 1 0 0 8a4 4 0 0 0 0-8z"/></svg>
             </div>
-            <h3 class="text-2xl font-bold">Free Homepage Demo For Your Business</h3>
-            <p class="mt-2 text-neutral-300">Get a custom homepage demo showcasing how we can improve your online presence. See the difference before committing.</p>
-            <div class="mt-3 flex items-center gap-2">
-              <span class="text-neutral-400 line-through">$150</span>
-              <span class="text-lg font-bold text-amber-400">FREE</span>
+            <h3 class="mt-5 text-lg font-bold text-white">CCTV & Surveillance Frameworks</h3>
+            <p class="mt-2 text-neutral-400 text-sm leading-relaxed">From localized dynamic systems to complex scalable 4K operations. Weatherproof setups, custom smart integrations, and remote secure network storage servers.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="p-6 rounded-2xl border border-neutral-900 bg-neutral-900/20 hover:bg-neutral-900/40 hover:border-neutral-800 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 border border-amber-500/10">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor"><path d="M12 18a2 2 0 1 0 .001 4.001A2 2 0 0 0 12 18m7-5a10 10 0 0 0-14 0l1.5 1.5a8 8 0 0 1 11 0zm4-4a16 16 0 0 0-22 0L2.5 10a14 14 0 0 1 19 0z"/></svg>
             </div>
-            <p class="mt-2 text-xs text-amber-400">Limited availability — Offer ends soon!</p>
-          </div>
-          <a href="#contact" class="mt-4 md:mt-0 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 font-medium shadow-lg shadow-amber-500/20 inline-block hover:scale-105 transition-transform">Claim Free Demo →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold">What we do</h2>
-      <p class="mt-3 text-neutral-300">Clear scope. Clean installs. Real results.</p>
-      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 hover:from-amber-500/10 hover:border-amber-400/30 transition-all shadow-xl">
-          <div class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center text-amber-400">
-            <svg viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M12 5a7 7 0 1 1 0 14a7 7 0 0 1 0-14m0-2a9 9 0 1 0 0 18a9 9 0 0 0 0-18m0 5a4 4 0 1 0 0 8a4 4 0 0 0 0-8z"/></svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold">CCTV and Video Surveillance</h3>
-          <p class="mt-2 text-neutral-300 text-sm leading-relaxed">Budget-friendly to pro 4K systems, indoor/outdoor, smart alerts, remote viewing, and secure storage.</p>
-        </div>
-        <div class="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 hover:from-amber-500/10 hover:border-amber-400/30 transition-all shadow-xl">
-          <div class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center text-amber-400">
-            <svg viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M12 18a2 2 0 1 0 .001 4.001A2 2 0 0 0 12 18m7-5a10 10 0 0 0-14 0l1.5 1.5a8 8 0 0 1 11 0zm4-4a16 16 0 0 0-22 0L2.5 10a14 14 0 0 1 19 0z"/></svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold">Access Points • Wi-Fi Design</h3>
-          <p class="mt-2 text-neutral-300 text-sm leading-relaxed">Heat-mapping, AP placement, mesh or wired backhaul, and configuration tuned to your space.</p>
-        </div>
-        <div class="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 hover:from-amber-500/10 hover:border-amber-400/30 transition-all shadow-xl">
-          <div class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center text-amber-400">
-            <svg viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M4 6h16v4H4zm0 6h16v6H4zM6 8h4v2H6zm0 8h4v2H6z"/></svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold">Switching and Configuration</h3>
-          <p class="mt-2 text-neutral-300 text-sm leading-relaxed">Managed switches, VLANs, QoS, PoE budgeting, and clean hand-offs to your ISP or gear.</p>
-        </div>
-        <div class="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 hover:from-amber-500/10 hover:border-amber-400/30 transition-all shadow-xl">
-          <div class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center text-amber-400">
-            <svg viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M3 7h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/></svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold">Structured Cabling and Rack Work</h3>
-          <p class="mt-2 text-neutral-300 text-sm leading-relaxed">Cat5e/Cat6 runs, terminations, testing, patch panels, labeling, and tidy racks.</p>
-        </div>
-        <div class="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 hover:from-amber-500/10 hover:border-amber-400/30 transition-all shadow-xl">
-          <div class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center text-amber-400">
-            <svg viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M12 1a5 5 0 0 1 5 5v2h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a5 5 0 0 1 5-5m3 7V6a3 3 0 1 0-6 0v2z"/></svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold">Troubleshooting and Optimization</h3>
-          <p class="mt-2 text-neutral-300 text-sm leading-relaxed">Fix slow speeds, dead zones, drops, interference, double-NAT, and camera reliability issues.</p>
-        </div>
-        <div class="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 hover:from-amber-500/10 hover:border-amber-400/30 transition-all shadow-xl">
-          <div class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center text-amber-400">
-            <svg viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M12 3l8 6v12h-6v-6H10v6H4V9z"/></svg>
-          </div>
-          <h3 class="mt-4 text-xl font-semibold">Website Development</h3>
-          <p class="mt-2 text-neutral-300 text-sm leading-relaxed">We build modern, high-converting business websites, and even offer free homepage demos for qualifying companies.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Packages -->
-  <section id="packages" class="py-20 border-t border-white/5 bg-neutral-950/60">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold">Packages</h2>
-      <p class="mt-3 text-neutral-300">Camera-first packages that scale to your space. Custom builds available.</p>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-3xl p-6 border border-white/10 bg-white/[0.02] shadow-xl">
-          <h3 class="text-xl font-semibold">Starter CCTV</h3>
-          <p class="mt-1 text-neutral-300 text-sm">One to two cameras, quick install — free estimate</p>
-          <ul class="mt-4 space-y-2 text-sm text-neutral-200">
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>Site check and placement advice</span></li>
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>PoE cabling and clean terminations</span></li>
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>Mobile viewing set-up</span></li>
-          </ul>
-          <a href="#contact" class="mt-6 w-full py-3 rounded-xl bg-white text-neutral-900 hover:bg-neutral-200 inline-block text-center font-medium">Get free estimate</a>
-          <a href="#contact" class="mt-3 w-full py-3 rounded-xl border border-white/20 hover:bg-white/10 inline-block text-center font-medium">Schedule walk-around</a>
-        </div>
-
-        <div class="rounded-3xl p-6 border border-amber-400/40 bg-amber-500/10 shadow-amber-500/20 shadow-xl">
-          <h3 class="text-xl font-semibold">Website Development</h3>
-          <p class="mt-1 text-neutral-300 text-sm">Modern, responsive websites that convert visitors to customers</p>
-          <ul class="mt-4 space-y-2 text-sm text-neutral-200">
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>Mobile-first responsive design</span></li>
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>SEO optimized content</span></li>
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>Fast loading performance</span></li>
-          </ul>
-          <a href="#contact" class="mt-6 w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 inline-block text-center font-medium">Get free homepage demo</a>
-          <a href="#contact" class="mt-3 w-full py-3 rounded-xl border border-white/20 hover:bg-white/10 inline-block text-center font-medium">See portfolio</a>
-        </div>
-
-        <div class="rounded-3xl p-6 border border-white/10 bg-white/[0.02] shadow-xl">
-          <h3 class="text-xl font-semibold">Complete Security</h3>
-          <p class="mt-1 text-neutral-300 text-sm">Commercial and multi-site — tailored estimates</p>
-          <ul class="mt-4 space-y-2 text-sm text-neutral-200">
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>8–32 cameras with power & PoE plan</span></li>
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>Rack build, labeling, documentation</span></li>
-            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-amber-400/80"></span><span>Wi-Fi heat map and VLAN design</span></li>
-          </ul>
-          <a href="#contact" class="mt-6 w-full py-3 rounded-xl bg-white text-neutral-900 hover:bg-neutral-200 inline-block text-center font-medium">Get free estimate</a>
-          <a href="#contact" class="mt-3 w-full py-3 rounded-xl border border-white/20 hover:bg-white/10 inline-block text-center font-medium">Schedule walk-around</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Logos strip -->
-  <section class="py-10 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4">
-      <p class="text-xs uppercase tracking-widest text-neutral-400 text-center">Trusted brands we deploy</p>
-      <div class="mt-6 grid grid-cols-2 md:grid-cols-6 gap-6 opacity-70">
-        <div class="rounded-xl bg-neutral-900/60 border border-white/5 py-4 text-center text-sm">Ubiquiti</div>
-        <div class="rounded-xl bg-neutral-900/60 border border-white/5 py-4 text-center text-sm">TP-Link Omada</div>
-        <div class="rounded-xl bg-neutral-900/60 border border-white/5 py-4 text-center text-sm">Cisco</div>
-        <div class="rounded-xl bg-neutral-900/60 border border-white/5 py-4 text-center text-sm">UniFi Protect</div>
-        <div class="rounded-xl bg-neutral-900/60 border border-white/5 py-4 text-center text-sm">Hikvision</div>
-        <div class="rounded-xl bg-neutral-900/60 border border-white/5 py-4 text-center text-sm">Reolink</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Recent work -->
-  <section id="work" class="py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold">Recent work</h2>
-      <p class="mt-3 text-neutral-300">A quick peek at quality and consistency.</p>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02]">
-          <img src="./rack2.jpg" alt="Rack build with tidy labeling" class="w-full h-56 md:h-64 object-cover" loading="lazy">
-          <div class="p-4">
-            <div class="font-medium">Business website redesign</div>
-            <div class="text-sm text-neutral-400">Increased conversions by 120%</div>
+            <h3 class="mt-5 text-lg font-bold text-white">Wireless Infrastructure & Heat Mapping</h3>
+            <p class="mt-2 text-neutral-400 text-sm leading-relaxed">Strategic access point array spacing, localized interference assessments, structured data pathways, and software tuning built for maximum signal balance.</p>
           </div>
         </div>
-        <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02]">
-          <img src="./cctv1.jpg" alt="Interior camera install" class="w-full h-56 md:h-64 object-cover" loading="lazy">
-          <div class="p-4">
-            <div class="font-medium">Restaurant CCTV with remote access</div>
-            <div class="text-sm text-neutral-400">Tampa Bay</div>
+        <!-- Card 3 -->
+        <div class="p-6 rounded-2xl border border-neutral-900 bg-neutral-900/20 hover:bg-neutral-900/40 hover:border-neutral-800 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 border border-amber-500/10">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor"><path d="M4 6h16v4H4zm0 6h16v6H4zM6 8h4v2H6zm0 8h4v2H6z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-white">Switching Matrix Configuration</h3>
+            <p class="mt-2 text-neutral-400 text-sm leading-relaxed">Managed infrastructure, explicit virtual network routing (VLANs), tailored QoS controls, strict PoE load configuration, and flawless upstream hand-offs.</p>
           </div>
         </div>
-        <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02]">
-          <img src="./website1.jpg" alt="Homepage & e-commerce website build" class="w-full h-56 md:h-64 object-cover" loading="lazy">
-          <div class="p-4">
-            <div class="font-medium">E-commerce website build</div>
-            <div class="text-sm text-neutral-400">Mobile-first design</div>
+        <!-- Card 4 -->
+        <div class="p-6 rounded-2xl border border-neutral-900 bg-neutral-900/20 hover:bg-neutral-900/40 hover:border-neutral-800 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 border border-amber-500/10">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor"><path d="M3 7h18v2H3zm0 4h12v2H3zm0 4h8v2H3z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-white">Low-Voltage Structured Cabling</h3>
+            <p class="mt-2 text-neutral-400 text-sm leading-relaxed">Certified Cat5e/Cat6 solid-core wire deployment. Clean systematic endpoints, multi-pair terminations, certified link checks, and comprehensive layout logs.</p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="p-6 rounded-2xl border border-neutral-900 bg-neutral-900/20 hover:bg-neutral-900/40 hover:border-neutral-800 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 border border-amber-500/10">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor"><path d="M12 1a5 5 0 0 1 5 5v2h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a5 5 0 0 1 5-5m3 7V6a3 3 0 1 0-6 0v2z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-white">System Optimization & Diagnostics</h3>
+            <p class="mt-2 text-neutral-400 text-sm leading-relaxed">Rapid identification of configuration bottlenecks, link drops, RF interference, double-NAT tracking errors, and camera matrix transmission dropouts.</p>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="p-6 rounded-2xl border border-neutral-900 bg-neutral-900/20 hover:bg-neutral-900/40 hover:border-neutral-800 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 border border-amber-500/10">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor"><path d="M12 3l8 6v12h-6v-6H10v6H4V9z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-white">Web Design & Asset Architecture</h3>
+            <p class="mt-2 text-neutral-400 text-sm leading-relaxed">Production of ultra-responsive, highly functional, performance-tuned web assets aimed to turn localized impressions into direct long-term operational revenue.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-20 border-t border-white/5">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold text-center">Common questions</h2>
-      <div class="mt-10 divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.02]">
+  <!-- Packages Section -->
+  <section id="packages" class="py-20 border-t border-neutral-900 bg-neutral-900/20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Structured Implementation Packages</h2>
+        <p class="text-neutral-400 mt-2">Scalable blueprints customized for operational demands. Custom tailoring provided on all services.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pkg 1 -->
+        <div class="rounded-3xl p-8 border border-neutral-900 bg-neutral-950 flex flex-col justify-between shadow-xl">
+          <div>
+            <h3 class="text-xl font-bold text-white">Starter Surveillance</h3>
+            <p class="text-xs text-neutral-500 mt-1">1–2 Camera Array Setup</p>
+            <div class="h-px bg-neutral-900 my-4"></div>
+            <ul class="space-y-3 text-sm text-neutral-400">
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Physical environment & array check</span></li>
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>PoE structural wire routing & drops</span></li>
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Local system endpoint configurations</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 space-y-2">
+            <a href="#contact" class="block w-full py-3 text-center rounded-xl bg-white text-neutral-950 font-bold hover:bg-neutral-200 transition-all text-sm">Request Free Estimate</a>
+            <a href="#contact" class="block w-full py-3 text-center rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white transition-all text-sm">Schedule Walk-Around</a>
+          </div>
+        </div>
+
+        <!-- Pkg 2 Featured -->
+        <div class="rounded-3xl p-8 border-2 border-amber-500/40 bg-gradient-to-b from-amber-500/[0.04] to-transparent flex flex-col justify-between shadow-2xl relative">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-amber-500 text-neutral-950 text-[10px] tracking-widest font-black uppercase shadow-lg">HIGH DEMAND</div>
+          <div>
+            <h3 class="text-xl font-bold text-white">Web Development Suite</h3>
+            <p class="text-xs text-amber-500 mt-1 font-medium">Strategic High-Conversion Web Architecture</p>
+            <div class="h-px bg-neutral-900 my-4"></div>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Mobile-First Fluid Interface Framework</span></li>
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Advanced Structural SEO Integration</span></li>
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Blazing Fast Content Delivery Optimization</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 space-y-2">
+            <a href="#contact" class="block w-full py-3 text-center rounded-xl bg-amber-500 text-neutral-950 font-bold hover:bg-amber-400 transition-all text-sm shadow-lg shadow-amber-500/10">Get Free Homepage Demo</a>
+            <a href="#work" class="block w-full py-3 text-center rounded-xl bg-neutral-900/60 border border-neutral-800 text-neutral-300 hover:text-white transition-all text-sm">Review Asset Portfolio</a>
+          </div>
+        </div>
+
+        <!-- Pkg 3 -->
+        <div class="rounded-3xl p-8 border border-neutral-900 bg-neutral-950 flex flex-col justify-between shadow-xl">
+          <div>
+            <h3 class="text-xl font-bold text-white">Enterprise Infrastructure</h3>
+            <p class="text-xs text-neutral-500 mt-1">Multi-Node & Commercial Scale</p>
+            <div class="h-px bg-neutral-900 my-4"></div>
+            <ul class="space-y-3 text-sm text-neutral-400">
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>8–32 Node camera system layout mapping</span></li>
+              <li class="<h4>Structured rack design and wire identification</h4>"></li>
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Structured rack builds & precise schemas</span></li>
+              <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Signal heatmap mapping & VLAN pathing</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 space-y-2">
+            <a href="#contact" class="block w-full py-3 text-center rounded-xl bg-white text-neutral-950 font-bold hover:bg-neutral-200 transition-all text-sm">Request Custom Scope</a>
+            <a href="#contact" class="block w-full py-3 text-center rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white transition-all text-sm">Book Site Survey</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Integration Strip -->
+  <section class="py-12 border-t border-b border-neutral-900 bg-neutral-950/60 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-[10px] uppercase font-bold tracking-widest text-neutral-500 text-center">Hardware Standards We Deploy & Maintain</p>
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center font-semibold text-neutral-400 text-sm">
+        <div class="py-3 px-4 rounded-xl bg-neutral-900/50 border border-neutral-900">Ubiquiti</div>
+        <div class="py-3 px-4 rounded-xl bg-neutral-900/50 border border-neutral-900">TP-Link Omada</div>
+        <div class="py-3 px-4 rounded-xl bg-neutral-900/50 border border-neutral-900">Cisco Systems</div>
+        <div class="py-3 px-4 rounded-xl bg-neutral-900/50 border border-neutral-900">UniFi Protect</div>
+        <div class="py-3 px-4 rounded-xl bg-neutral-900/50 border border-neutral-900">Hikvision</div>
+        <div class="py-3 px-4 rounded-xl bg-neutral-900/50 border border-neutral-900">Reolink Tech</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Work Cases Section -->
+  <section id="work" class="py-20 bg-neutral-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Recent Case Analytics</h2>
+        <p class="text-neutral-400 mt-2">A high-fidelity inspection of recent projects highlighting technical refinement.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-neutral-900 bg-neutral-900/10 overflow-hidden group hover:border-neutral-800 transition-all duration-300">
+          <div class="overflow-hidden aspect-video bg-neutral-900">
+            <img src="./rack2.jpg" alt="Rack build with tidy labeling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h4 class="font-bold text-white text-lg">Business Platform Infrastructure</h4>
+            <p class="text-neutral-400 text-xs mt-1">Conversion Optimization metrics tracked +120% improvement post-release.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-neutral-900 bg-neutral-900/10 overflow-hidden group hover:border-neutral-800 transition-all duration-300">
+          <div class="overflow-hidden aspect-video bg-neutral-900">
+            <img src="./cctv1.jpg" alt="Interior camera install" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h4 class="font-bold text-white text-lg">Hospitality CCTV Integration</h4>
+            <p class="text-neutral-400 text-xs mt-1">Multi-node environment setup complete with real-time tracking loops inside Tampa Bay.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-neutral-900 bg-neutral-900/10 overflow-hidden group hover:border-neutral-800 transition-all duration-300">
+          <div class="overflow-hidden aspect-video bg-neutral-900">
+            <img src="./website1.jpg" alt="Homepage & e-commerce website build" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h4 class="font-bold text-white text-lg">E-Commerce Asset Architecture</h4>
+            <p class="text-neutral-400 text-xs mt-1">Mobile-First core codebase deployment optimized for fast-loading performance scales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="py-20 border-t border-neutral-900 bg-neutral-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl font-black text-center text-white tracking-tight">Technical FAQ</h2>
+      <div class="mt-10 border border-neutral-900 rounded-2xl divide-y divide-neutral-900 bg-neutral-900/10 overflow-hidden">
+        
         <div>
-          <button class="faq w-full text-left px-6 py-5 flex items-center justify-between">
-            <span class="font-medium">Do you work residential and commercial</span>
-            <svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M7 10l5 5l5-5z"/></svg>
+          <button class="faq w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-white hover:bg-neutral-900/40 transition-colors" aria-expanded="false">
+            <span>Do you deploy frameworks within both residential and commercial structures?</span>
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-neutral-500 transition-transform duration-300 transform"><path fill="currentColor" d="M7 10l5 5l5-5z"/></svg>
           </button>
-          <div class="answer hidden px-6 pb-6 text-neutral-300">Yes. We handle apartments, single family homes, retail, restaurants, offices, and warehouses across Tampa Bay.</div>
+          <div class="answer hidden px-6 pb-6 text-sm text-neutral-400 leading-relaxed">
+            Absolutely. Our engineering scope spans multi-family developments, standard single-family homes, retail sites, restaurants, industrial spaces, and warehouse footprints across the entire Tampa Bay area.
+          </div>
         </div>
+
         <div>
-          <button class="faq w-full text-left px-6 py-5 flex items-center justify-between">
-            <span class="font-medium">Are you budget friendly</span>
-            <svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M7 10l5 5l5-5z"/></svg>
+          <button class="faq w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-white hover:bg-neutral-900/40 transition-colors" aria-expanded="false">
+            <span>Are project build estimates adaptable to strict budget constraints?</span>
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-neutral-500 transition-transform duration-300 transform"><path fill="currentColor" d="M7 10l5 5l5-5z"/></svg>
           </button>
-          <div class="answer hidden px-6 pb-6 text-neutral-300">We design solutions that match your budget and scale up later if needed. We will give options at multiple price points.</div>
+          <div class="answer hidden px-6 pb-6 text-sm text-neutral-400 leading-relaxed">
+            Yes. We organize configurations designed to scale safely. We offer layered estimations mapping across multiple cost benchmarks, allowing you to establish foundational components now and expand down the road.
+          </div>
         </div>
+
         <div>
-          <button class="faq w-full text-left px-6 py-5 flex items-center justify-between">
-            <span class="font-medium">Can you use my existing equipment</span>
-            <svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M7 10l5 5l5-5z"/></svg>
+          <button class="faq w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-white hover:bg-neutral-900/40 transition-colors" aria-expanded="false">
+            <span>Can pre-existing customer networking equipment be integrated?</span>
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-neutral-500 transition-transform duration-300 transform"><path fill="currentColor" d="M7 10l5 5l5-5z"/></svg>
           </button>
-          <div class="answer hidden px-6 pb-6 text-neutral-300">We can integrate what you already own if it meets security and performance standards. If not, we will recommend reliable options.</div>
+          <div class="answer hidden px-6 pb-6 text-sm text-neutral-400 leading-relaxed">
+            We will review and incorporate current assets provided they align with modern security standards and expected data throughput thresholds. If equipment falls short, we will supply alternatives tailored to your system goals.
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-white/[0.01] p-6 md:p-10 shadow-2xl">
-        <div class="md:flex items-start gap-8">
-          <div class="md:w-1/2">
-            <h2 class="text-3xl font-bold">Tell us about your project</h2>
-            <p class="mt-2 text-neutral-300">We will reply within one business day.</p>
-            <div class="mt-6 space-y-3 text-sm text-neutral-300">
-              <div class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M21 8V7l-3 2l-3-2v1l3 2zm-6 2l3 2l3-2v7H3V5h12z"/></svg><span id="contactEmail">contactnetwiredsolutions@gmail.com</span></div>
-              <div class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2c1.3.5 2.7.8 4.1.8c.7 0 1.3.6 1.3 1.3V20c0 .7-.6 1.3-1.3 1.3C10.4 21.3 2.7 13.6 2.7 3.3C2.7 2.6 3.3 2 4 2h2.9c.7 0 1.3.6 1.3 1.3c0 1.4.3 2.8.8 4.1c.2.4.1.9-.2 1.2z"/></svg><span id="contactPhone">813-365-4815</span></div>
-              <div class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7m0 9.3A2.3 2.3 0 1 1 12 6.7a2.3 2.3 0 0 1 0 4.6"/></svg><span>Tampa Bay, Florida</span></div>
+  <!-- Interactive Contact Section -->
+  <section id="contact" class="py-20 border-t border-neutral-900 bg-neutral-950 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="rounded-3xl border border-neutral-900 bg-neutral-900/20 p-8 md:p-12 shadow-2xl backdrop-blur-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <h2 class="text-3xl font-black text-white tracking-tight">Initiate Project Scope</h2>
+              <p class="text-neutral-400 mt-2 text-sm leading-relaxed">Provide your criteria, and a technical representative will process a feedback routing sheet back to you within 24 operational hours.</p>
+            </div>
+            
+            <div class="space-y-4 text-sm text-neutral-300 border-t border-neutral-900 pt-6">
+              <div class="flex items-center gap-3">
+                <div class="text-amber-500"><svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M21 8V7l-3 2l-3-2v1l3 2zm-6 2l3 2l3-2v7H3V5h12z"/></svg></div>
+                <span id="contactEmail" class="hover:text-amber-400 transition-colors">contactnetwiredsolutions@gmail.com</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="text-amber-500"><svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2c1.3.5 2.7.8 4.1.8c.7 0 1.3.6 1.3 1.3V20c0 .7-.6 1.3-1.3 1.3C10.4 21.3 2.7 13.6 2.7 3.3C2.7 2.6 3.3 2 4 2h2.9c.7 0 1.3.6 1.3 1.3c0 1.4.3 2.8.8 4.1c.2.4.1.9-.2 1.2z"/></svg></div>
+                <span id="contactPhone" class="hover:text-amber-400 transition-colors">813-365-4815</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="text-amber-500"><svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7m0 9.3A2.3 2.3 0 1 1 12 6.7a2.3 2.3 0 0 1 0 4.6"/></svg></div>
+                <span class="text-neutral-400">Tampa Bay, Florida</span>
+              </div>
+            </div>
+            <div class="pt-2">
+              <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-amber-500 tracking-wider uppercase hover:text-amber-400 transition-colors">
+                Book Free On-Site System Audit <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
           </div>
-          <div class="md:w-1/2 mt-8 md:mt-0">
+
+          <div class="lg:col-span-7">
             <form id="inquiryForm" class="space-y-4" method="POST" action="https://formspree.io/f/mrbarybo">
               <input type="hidden" name="_subject" value="New inquiry from NetWired Solutions">
               <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
 
-              <div class="grid md:grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="text-sm text-neutral-300">Name</label>
-                  <input name="name" required class="mt-1 w-full rounded-xl bg-neutral-900/60 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500" placeholder="Your name">
+                  <label class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Your Name</label>
+                  <input name="name" required class="mt-1.5 w-full rounded-xl bg-neutral-950 border border-neutral-900 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" placeholder="John Doe">
                 </div>
                 <div>
-                  <label class="text-sm text-neutral-300">Email</label>
-                  <input name="email" type="email" required class="mt-1 w-full rounded-xl bg-neutral-900/60 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500" placeholder="you@email.com">
+                  <label class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Email Route</label>
+                  <input name="email" type="email" required class="mt-1.5 w-full rounded-xl bg-neutral-950 border border-neutral-900 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" placeholder="john@company.com">
                 </div>
               </div>
 
               <div>
-                <label class="text-sm text-neutral-300">Phone</label>
-                <input name="phone" class="mt-1 w-full rounded-xl bg-neutral-900/60 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500" placeholder="Optional">
+                <label class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Contact Phone</label>
+                <input name="phone" class="mt-1.5 w-full rounded-xl bg-neutral-950 border border-neutral-900 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" placeholder="(813) 000-0000 (Optional)">
               </div>
 
               <div>
-                <label class="text-sm text-neutral-300">Service</label>
-                <select name="service" class="mt-1 w-full rounded-xl bg-neutral-900/60 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500">
+                <label class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Selected Matrix Service</label>
+                <select name="service" class="mt-1.5 w-full rounded-xl bg-neutral-950 border border-neutral-900 px-4 py-3 text-sm text-neutral-400 outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
                   <option>CCTV and video surveillance</option>
                   <option>Wi-Fi design and optimization</option>
                   <option>Access point installation</option>
@@ -352,39 +456,34 @@
                   <option>Structured cabling</option>
                   <option>Website Development</option>
                   <option>Free Homepage Demo</option>
-                  <option>Other</option>
+                  <option>Other Services</option>
                 </select>
               </div>
 
               <div>
-                <label class="text-sm text-neutral-300">Business Name</label>
-                <input name="business_name" class="mt-1 w-full rounded-xl bg-neutral-900/60 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500" placeholder="Your business name">
+                <label class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Corporate Designation Name</label>
+                <input name="business_name" class="mt-1.5 w-full rounded-xl bg-neutral-950 border border-neutral-900 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" placeholder="Company Legal Name">
               </div>
 
-              <div class="grid md:grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="text-sm text-neutral-300">Business Location</label>
-                  <input name="business_location" class="mt-1 w-full rounded-xl bg-neutral-900/60 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500" placeholder="City, State">
+                  <label class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Operational Location</label>
+                  <input name="business_location" class="mt-1.5 w-full rounded-xl bg-neutral-950 border border-neutral-900 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" placeholder="e.g. Tampa, FL">
                 </div>
                 <div>
-                  <label class="text-sm text-neutral-300">Business Type</label>
-                  <input name="business_type" class="mt-1 w-full rounded-xl bg-neutral-900/60 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500" placeholder="Industry">
+                  <label class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Industry Sector Type</label>
+                  <input name="business_type" class="mt-1.5 w-full rounded-xl bg-neutral-950 border border-neutral-900 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all" placeholder="e.g. Logistics / Retail">
                 </div>
               </div>
 
               <div>
-                <label class="text-sm text-neutral-300">Project details</label>
-                <textarea name="message" rows="4" class="mt-1 w-full rounded-xl bg-neutral-900/60 border border-white/10 px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500" placeholder="Tell us what problem you want solved"></textarea>
+                <label class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Project Specification Details</label>
+                <textarea name="message" rows="4" class="mt-1.5 w-full rounded-xl bg-neutral-950 border border-neutral-900 px-4 py-3 text-sm text-white outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all resize-none" placeholder="Elaborate on infrastructure deficiencies or development objectives..."></textarea>
               </div>
 
               <input type="hidden" name="website" value="NetWired Solutions">
-
-              <button type="submit" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 font-medium shadow-lg shadow-amber-500/20">Send inquiry</button>
-              <p id="formMsg" class="text-sm text-neutral-300"></p>
-
-              <div class="mt-4 text-center">
-                <a href="#contact" class="inline-block px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 font-medium shadow-lg shadow-amber-500/20">Book a free site survey</a>
-              </div>
+              <button type="submit" class="w-full py-4 rounded-xl bg-amber-500 text-neutral-950 font-black hover:bg-amber-400 shadow-xl shadow-amber-500/10 hover:shadow-amber-500/20 transition-all text-sm uppercase tracking-wider">Transmit Project Specs</button>
+              <p id="formMsg" class="text-xs text-neutral-400 text-center mt-2"></p>
             </form>
           </div>
         </div>
@@ -392,80 +491,131 @@
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section id="gallery" class="py-20 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold">Gallery</h2>
-      <p class="mt-3 text-neutral-300">Real installs from NetWired Solutions.</p>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <img src="./rack1.jpg" alt="Rack build" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <img src="./rack2.jpg" alt="Patch panel & labeling" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <img src="./website1.jpg" alt="Website development" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <!-- Replaced missing website2.jpg with access point shots you have -->
-        <img src="./ap1.jpg" alt="Access point install 1" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <img src="./ap2.jpg" alt="Access point install 2" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <img src="./cctv1.jpg" alt="Interior camera" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <img src="./cctv2.jpg" alt="Exterior camera" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <img src="./cable1.jpg" alt="Structured cabling" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <img src="./nvr1.jpg" alt="NVR setup" class="w-full h-auto rounded-2xl border border-white/10 object-cover" loading="lazy">
-        <!-- site1.jpg kept in reserve; swap any image above to use it -->
+  <!-- Complete Media Gallery -->
+  <section id="gallery" class="py-20 border-t border-neutral-900 bg-neutral-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Deployment Log Gallery</h2>
+        <p class="text-neutral-400 mt-2">Verified field installations handled on-site by NetWired Solutions specialists.</p>
+      </div>
+
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./rack1.jpg" alt="Rack build" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./rack2.jpg" alt="Patch panel & labeling" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./website1.jpg" alt="Website development" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./ap1.jpg" alt="Access point install 1" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./ap2.jpg" alt="Access point install 2" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./cctv1.jpg" alt="Interior camera" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./cctv2.jpg" alt="Exterior camera" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./cable1.jpg" alt="Structured cabling" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        <div class="break-inside-avoid rounded-2xl overflow-hidden border border-neutral-900 bg-neutral-900/20 p-2 group hover:border-neutral-800 transition-all">
+          <img src="./nvr1.jpg" alt="NVR setup" class="w-full h-auto rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-12 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+  <!-- Clean Footer -->
+  <footer class="border-t border-neutral-900 bg-neutral-950 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
-        <img src="./logo.png" alt="NetWired Solutions" class="w-8 h-8 rounded-lg object-contain bg-white"/>
-        <div class="text-sm text-neutral-400">© <span id="year"></span> NetWired Solutions. All rights reserved.</div>
+        <img src="./logo.png" alt="NetWired Solutions" class="w-8 h-8 rounded-lg object-contain bg-white p-0.5"/>
+        <div class="text-xs text-neutral-500">© <span id="year"></span> NetWired Solutions. Structured low-voltage deployment registry. All rights reserved.</div>
       </div>
-      <div class="text-sm text-neutral-400 flex items-center gap-4">
-        <a href="#services" class="hover:text-amber-400">Services</a>
-        <a href="#packages" class="hover:text-amber-400">Packages</a>
-        <a href="#work" class="hover:text-amber-400">Work</a>
-        <a href="#contact" class="hover:text-amber-400">Contact</a>
+      <div class="text-xs text-neutral-400 flex flex-wrap items-center justify-center gap-6 font-medium">
+        <a href="#services" class="hover:text-amber-500 transition-colors">Services</a>
+        <a href="#packages" class="hover:text-amber-500 transition-colors">Packages</a>
+        <a href="#work" class="hover:text-amber-500 transition-colors">Case Analytics</a>
+        <a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery Log</a>
+        <a href="#contact" class="hover:text-amber-500 transition-colors">Secure Contact</a>
       </div>
     </div>
   </footer>
 
+  <!-- Unified Functional Scripts -->
   <script>
-    // Current year
+    // System Clock Calibration 
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
+    // Mobile Navbar Routing Controller
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
 
-    // Simple carousel
-    let idx = 0;
+    // High Fidelity Carousel Controls
+    let activeIndex = 0;
     const slides = document.querySelectorAll('.carousel');
-    setInterval(() => {
-      slides.forEach((s, i) => s.classList.toggle('opacity-100', i === idx));
-      slides.forEach((s, i) => s.classList.toggle('opacity-0', i !== idx));
-      idx = (idx + 1) % slides.length;
-    }, 3800);
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    if(slides.length > 0 && dotsContainer) {
+      setInterval(() => {
+        slides.forEach((slide, idx) => {
+          if (idx === activeIndex) {
+            slide.classList.remove('opacity-0', 'scale-95', 'z-0');
+            slide.classList.add('opacity-100', 'scale-100', 'z-10');
+          } else {
+            slide.classList.remove('opacity-100', 'scale-100', 'z-10');
+            slide.classList.add('opacity-0', 'scale-95', 'z-0');
+          }
+        });
+        
+        // Render Active Indicator Dots
+        const dots = dotsContainer.children;
+        Array.from(dots).forEach((dot, dotIdx) => {
+          if(dotIdx === activeIndex) {
+            dot.className = "w-6 h-1 rounded-full bg-amber-500 transition-all duration-300";
+          } else {
+            dot.className = "w-2 h-1 rounded-full bg-neutral-800 transition-all duration-300";
+          }
+        });
 
-    <script>
-/* FAQ accordion — paste this at the bottom, replace the old FAQ script */
-document.querySelectorAll('.faq').forEach((btn) => {
-  const ans = btn.nextElementSibling; // the answer div is the next sibling of the button
-  if (!ans) return;
+        activeIndex = (activeIndex + 1) % slides.length;
+      }, 4200);
+    }
 
-  // start closed
-  ans.classList.add('hidden');
-  btn.setAttribute('aria-expanded', 'false');
+    // High Performance UI Accordion Controller 
+    document.querySelectorAll('.faq').forEach((btn) => {
+      const ans = btn.nextElementSibling;
+      if (!ans) return;
 
-  btn.addEventListener('click', () => {
-    const isHidden = ans.classList.toggle('hidden');
-    btn.setAttribute('aria-expanded', String(!isHidden));
-  });
-});
-</script>
-
-
-  <!-- Watermark script removed -->
-  <!-- <script src="https://deepsite.hf.co/deepsite-badge.js"></script> -->
+      btn.addEventListener('click', () => {
+        const isHidden = ans.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
+        
+        // Handle icon matrix transformation state
+        const icon = btn.querySelector('svg');
+        if(icon) {
+          if(!isHidden) {
+            icon.classList.add('rotate-180', 'text-amber-500');
+          } else {
+            icon.classList.remove('rotate-180', 'text-amber-500');
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
+```
