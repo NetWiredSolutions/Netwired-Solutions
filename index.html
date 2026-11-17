@@ -1,872 +1,108 @@
-<!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetWired Solutions | Enterprise Network Infrastructure & Low Voltage</title>
-    <meta name="description" content="NetWired Solutions provides premier enterprise network architecture, structured cabling, fiber optics, wireless design, and security surveillance systems for commercial clients.">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        dark: {
-                            900: '#000000',
-                            800: '#0a0a0c',
-                            700: '#141417',
-                            600: '#1f1f24'
-                        },
-                        brand: {
-                            50: '#f0f6ff',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'Inter', 'Segoe UI', 'Roboto', 'sans-serif']
-                    },
-                    letterSpacing: {
-                        tighter: '-0.04em',
-                        tight: '-0.02em',
-                        normal: '0em',
-                        wide: '0.02em',
-                        wider: '0.05em',
-                        widest: '0.1em'
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Google Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom Styles & Apple-esque Aesthetics -->
-    <style>
-        body {
-            letter-spacing: -0.01em;
-        }
-        @keyframes pulseGlow {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.04); }
-        }
-        .animate-glow {
-            animation: pulseGlow 10s ease-in-out infinite;
-        }
-        .glass-panel {
-            background: rgba(10, 10, 12, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card {
-            background: rgba(20, 20, 23, 0.5);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.3);
-            background: rgba(25, 25, 30, 0.7);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-            transform: translateY(-2px);
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #000000; }
-        ::-webkit-scrollbar-thumb { background: #1f1f24; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101820">
+<meta name="description" content="NetWired Solutions provides network installation, structured cabling, business Wi-Fi and IP security camera systems in Tampa Bay, Florida.">
+<title>NetWired Solutions — Networks Built for the Real World</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#15212b;--paper:#f6f5f1;--muted:#69757e;--line:#d9dedf;--accent:#1265ec;--deep:#101b26;--white:#fff;--max:1260px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}img{max-width:100%;display:block}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #55a0ff;outline-offset:4px}.wrap{width:min(var(--max),calc(100% - 88px));margin-inline:auto}.eyebrow{font-size:.72rem;text-transform:uppercase;font-weight:800;letter-spacing:.16em}.topline{height:5px;background:var(--accent)}
+header{position:sticky;top:0;z-index:30;background:rgba(246,245,241,.96);backdrop-filter:blur(15px);border-bottom:1px solid #dfe2e3}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:13px;font:800 1.05rem "Manrope",sans-serif;letter-spacing:-.045em}.mark{width:35px;height:35px;background:var(--ink);color:#fff;display:grid;place-items:center;clip-path:polygon(0 0,100% 0,100% 70%,70% 100%,0 100%);font:800 21px "Manrope",sans-serif}.brand strong{color:var(--accent)}.links{display:flex;align-items:center;gap:31px;font-size:.85rem;font-weight:700}.links>a:not(.nav-cta):hover{color:var(--accent)}.nav-cta,.btn{display:inline-flex;justify-content:center;align-items:center;gap:16px;padding:15px 22px;font-size:.87rem;font-weight:800;border:1px solid transparent;transition:background .2s,transform .2s}.nav-cta{background:var(--ink);color:#fff}.nav-cta:hover,.btn-primary:hover{background:#28425c;transform:translateY(-2px)}.menu{display:none;background:transparent;border:0;font-size:1.7rem;color:var(--ink)}
+.hero{background:var(--deep);color:#fff;position:relative;overflow:hidden}.hero-inner{min-height:650px;display:grid;grid-template-columns:1.03fr .97fr;align-items:stretch}.hero-copy{padding:106px 54px 104px 0;position:relative;z-index:2}.hero .eyebrow{color:#79a9ff;display:flex;align-items:center;gap:13px}.hero .eyebrow:before{content:"";height:2px;width:29px;background:#79a9ff}.hero h1{font:800 clamp(3.5rem,6vw,6.65rem)/1.055 "Manrope",sans-serif;letter-spacing:-.072em;margin:26px 0 27px;max-width:750px}.hero h1 em{font-style:normal;color:#75a6fd}.hero p{max-width:540px;font-size:1.1rem;line-height:1.8;color:#c0cbd3;margin:0 0 39px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn-primary{background:var(--accent);color:#fff}.btn-outline{color:#fff;border-color:#8393a2;background:transparent}.btn-outline:hover{background:#ffffff19}.hero-picture{position:relative;min-width:0;background:linear-gradient(140deg,#304759,#142532)}.hero-picture img{width:100%;height:100%;object-fit:cover;filter:saturate(.75) contrast(1.07)}.hero-picture:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#101b26 0%,transparent 23%),linear-gradient(0deg,#101b2699,transparent 50%);pointer-events:none}.photo-note{position:absolute;bottom:35px;right:35px;z-index:1;max-width:260px;text-align:right;color:#fff;font-weight:700;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em}.photo-note span{display:block;font-size:.65rem;font-weight:400;color:#ccd5d9;margin-top:5px}.fallback-photo{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#aac1d1;font-size:1rem;letter-spacing:.05em;z-index:0}.fallback-photo .graphic{width:60%;aspect-ratio:1;display:grid;place-items:center;border:1px solid #7490a34d;background:repeating-linear-gradient(0deg,transparent 0 19px,#748b9e36 20px 21px);font:700 clamp(5rem,12vw,12rem) "Manrope";color:#9abde333}
+.strip{background:#e9edf0;border-bottom:1px solid #d5dcdf}.strip-inner{display:grid;grid-template-columns:1.2fr repeat(4,1fr);align-items:center;gap:25px;min-height:94px}.strip-title{font-size:.73rem;letter-spacing:.11em;text-transform:uppercase;color:#677784;font-weight:800}.strip-item{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:800}.tiny-square{height:7px;width:7px;background:var(--accent);flex:none}
+.section{padding:110px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}.section-head h2,.intro h2,.work h2,.contact h2{font:800 clamp(2.3rem,4.1vw,4.6rem)/1.12 "Manrope",sans-serif;letter-spacing:-.065em;margin:13px 0 0}.section-head p{max-width:390px;line-height:1.75;color:#60707c;margin:0 0 5px}.blue{color:var(--accent)}
+.service-list{border-top:1px solid #cdd5d8}.service{display:grid;grid-template-columns:70px 1fr 1.15fr 35px;gap:28px;align-items:center;padding:28px 6px;border-bottom:1px solid #cdd5d8;transition:padding .2s,background .2s}.service:hover{padding-left:15px;background:#fff}.service .num{font:800 .75rem "Manrope";color:#778994}.service h3{font:800 1.34rem "Manrope";letter-spacing:-.035em;margin:0}.service p{color:#63717b;line-height:1.65;margin:0;font-size:.93rem}.arrow{color:var(--accent);font-size:1.4rem}
+.intro{background:#e7e9e6}.intro-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:85px;align-items:center}.intro h2{max-width:560px}.intro p{line-height:1.85;color:#5a6972;font-size:1.04rem}.intro strong{color:var(--ink)}.intro-image{height:520px;position:relative;background:#283a45}.intro-image img{width:100%;height:100%;object-fit:cover}.intro-image:before{content:"";position:absolute;inset:15px auto auto -16px;width:38%;height:38%;border-left:4px solid var(--accent);border-top:4px solid var(--accent);z-index:2;pointer-events:none}.checkline{margin-top:28px;padding-top:22px;border-top:1px solid #c5cbca;font-weight:700;font-size:.94rem}
+.work{background:var(--deep);color:#fff}.work .section-head p{color:#adbcc7}.work-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:15px}.work-card{min-width:0;position:relative;height:395px;overflow:hidden;background:#243d4a}.work-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:saturate(.75)}.work-card:hover img{transform:scale(1.05)}.work-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0b1520f5,transparent 66%)}.work-card div{position:absolute;bottom:28px;left:25px;right:24px;z-index:1}.work-card small{font-size:.69rem;text-transform:uppercase;letter-spacing:.14em;color:#94baff;font-weight:800}.work-card h3{font:800 1.35rem/1.25 "Manrope";letter-spacing:-.03em;margin:10px 0 0}.work-note{font-size:.85rem;line-height:1.7;color:#9bacba;margin-top:22px}
+.advantages{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #cbd2d3;border-bottom:1px solid #cbd2d3}.adv{padding:36px 42px 36px 0}.adv+.adv{border-left:1px solid #cbd2d3;padding-left:42px}.adv .index{color:var(--accent);font-weight:800;font-size:.78rem}.adv h3{font:800 1.25rem "Manrope";letter-spacing:-.04em;margin:18px 0 12px}.adv p{font-size:.92rem;color:#62717d;line-height:1.8;margin:0}
+.contact{background:#e7e9e6}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px}.contact h2{max-width:510px}.contact p{line-height:1.85;color:#5d6b74;max-width:480px}.contact-method{display:block;padding:17px 0;border-bottom:1px solid #c4cbcc;font-weight:800;overflow-wrap:anywhere}.contact-method small{display:block;font-weight:700;text-transform:uppercase;letter-spacing:.13em;font-size:.68rem;color:#6c7a83;margin-bottom:7px}.contact-method:hover{color:var(--accent)}.form-shell{background:#fff;padding:40px;border:1px solid #d8dfdf;box-shadow:0 22px 70px #1724310c}.form-shell h3{font:800 1.55rem "Manrope";letter-spacing:-.04em;margin:0 0 7px}.form-shell>p{font-size:.85rem;margin:0 0 24px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{margin-bottom:18px}.field.full{grid-column:1/-1}label{display:block;font-size:.78rem;font-weight:800;margin-bottom:8px}input,textarea,select{width:100%;padding:14px;background:#f8f9f8;border:1px solid #bdc8cd;border-radius:0;color:var(--ink);outline:none}textarea{resize:vertical;min-height:116px}input:focus,textarea:focus,select:focus{border-color:var(--accent)}.form-shell .btn{width:100%;border:0}.form-foot{font-size:.74rem!important;line-height:1.6!important;margin:13px 0 0!important}
+footer{background:#101b26;color:#cbd3d9;padding:44px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.footer-inner .brand{color:#fff}.footer-inner .mark{background:var(--accent)}.footer-inner p{font-size:.78rem;color:#95a4af;text-align:right}
+@media(max-width:980px){.wrap{width:min(var(--max),calc(100% - 48px))}.links{gap:17px}.hero-inner{grid-template-columns:1fr 42%}.hero-copy{padding:88px 20px 86px 0}.hero h1{font-size:clamp(3.5rem,6.4vw,5.2rem)}.strip-inner{grid-template-columns:repeat(4,1fr);padding:24px 0}.strip-title{grid-column:1/-1}.intro-layout,.contact-grid{gap:38px}.intro-image{height:440px}.work-grid{grid-template-columns:repeat(3,1fr)}.work-card{height:320px}.service{grid-template-columns:40px 1fr 1.2fr 25px;gap:15px}}
+@media(max-width:700px){.wrap{width:calc(100% - 36px)}.nav{height:67px}.menu{display:block}.links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--paper);padding:24px 18px 30px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #dfe2e3}.links.open{display:flex}.links a{padding:13px 8px}.links .nav-cta{margin-top:12px;text-align:center}.hero-inner{grid-template-columns:1fr}.hero-copy{padding:72px 0 66px}.hero h1{font-size:clamp(3.4rem,12vw,5.7rem)}.hero p{font-size:1rem}.hero-picture{height:280px}.hero-picture:after{background:linear-gradient(0deg,#101b2699,transparent 75%)}.strip-inner{grid-template-columns:1fr 1fr;gap:18px}.section{padding:75px 0}.section-head{display:block;margin-bottom:30px}.section-head p{margin-top:22px}.service{grid-template-columns:26px 1fr 22px;gap:12px;padding:23px 0}.service p{grid-column:2/3;grid-row:2}.service .arrow{grid-column:3;grid-row:1}.service h3{font-size:1.14rem}.intro-layout,.contact-grid{grid-template-columns:1fr}.intro-image{height:320px;order:-1}.work-grid{grid-template-columns:1fr 1fr}.work-card{height:260px}.work-card:first-child{grid-column:1/-1;height:320px}.advantages{grid-template-columns:1fr}.adv,.adv+.adv{border-left:0;border-bottom:1px solid #cbd2d3;padding:25px 0}.adv:last-child{border:0}.form-shell{padding:24px}.footer-inner{flex-direction:column;align-items:start}.footer-inner p{text-align:left}}
+@media(max-width:420px){.work-grid{grid-template-columns:1fr}.work-card,.work-card:first-child{grid-column:auto;height:290px}.fields{grid-template-columns:1fr}.hero h1{font-size:3.3rem}.strip-item{font-size:.75rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
 </head>
-<body class="bg-dark-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
-
-    <!-- Header / Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/5 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="flex items-center justify-between h-24">
-                <!-- Logo -->
-                <a href="#" class="flex items-center space-x-3.5 group">
-                    <img src="logo.png" alt="NetWired Solutions Logo" class="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
-                    <span class="text-lg font-bold tracking-tight text-white flex items-center">
-                        NetWired <span class="text-brand-400 ml-1.5 font-normal">Solutions</span>
-                    </span>
-                </a>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-10">
-                    <a href="#services" class="text-xs font-medium tracking-wide uppercase text-slate-400 hover:text-white transition-colors">Services</a>
-                    <a href="#why-us" class="text-xs font-medium tracking-wide uppercase text-slate-400 hover:text-white transition-colors">Why Us</a>
-                    <a href="#projects" class="text-xs font-medium tracking-wide uppercase text-slate-400 hover:text-white transition-colors">Projects</a>
-                    <a href="#process" class="text-xs font-medium tracking-wide uppercase text-slate-400 hover:text-white transition-colors">Process</a>
-                    <a href="#gallery" class="text-xs font-medium tracking-wide uppercase text-slate-400 hover:text-white transition-colors">Gallery</a>
-                    <a href="#faq" class="text-xs font-medium tracking-wide uppercase text-slate-400 hover:text-white transition-colors">FAQ</a>
-                    <a href="#contact" class="text-xs font-medium tracking-wide uppercase text-slate-400 hover:text-white transition-colors">Contact</a>
-                </nav>
-
-                <!-- Action Button -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <a href="#contact" class="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-semibold tracking-wide uppercase text-white transition-all duration-300 bg-white/10 hover:bg-white/20 border border-white/10 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-400">
-                        Get Free Quote
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-white/10 px-6 pt-4 pb-8 space-y-4">
-            <a href="#services" class="block py-2 text-sm font-medium tracking-wide uppercase text-slate-300 hover:text-brand-400">Services</a>
-            <a href="#why-us" class="block py-2 text-sm font-medium tracking-wide uppercase text-slate-300 hover:text-brand-400">Why Us</a>
-            <a href="#projects" class="block py-2 text-sm font-medium tracking-wide uppercase text-slate-300 hover:text-brand-400">Projects</a>
-            <a href="#process" class="block py-2 text-sm font-medium tracking-wide uppercase text-slate-300 hover:text-brand-400">Process</a>
-            <a href="#gallery" class="block py-2 text-sm font-medium tracking-wide uppercase text-slate-300 hover:text-brand-400">Gallery</a>
-            <a href="#faq" class="block py-2 text-sm font-medium tracking-wide uppercase text-slate-300 hover:text-brand-400">FAQ</a>
-            <a href="#contact" class="block py-2 text-sm font-medium tracking-wide uppercase text-slate-300 hover:text-brand-400">Contact</a>
-            <div class="pt-4">
-                <a href="#contact" class="w-full inline-flex items-center justify-center px-6 py-3 text-xs font-semibold tracking-wide uppercase text-white bg-white/10 border border-white/10 rounded-full">
-                    Get Free Quote
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- 1. Full-screen Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
-        <!-- Background Image with Overlay & Gradients -->
-        <div class="absolute inset-0 z-0">
-            <img src="rack1.jpg" alt="Enterprise Network Rack" class="w-full h-full object-cover object-center filter brightness-[0.35] scale-105 transform animate-glow">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/60 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-dark-900/80 via-transparent to-dark-900/80"></div>
-        </div>
-
-        <div class="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center py-28">
-            <!-- Badge -->
-            <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full glass-panel border border-white/10 text-brand-400 text-xs font-medium tracking-widest uppercase mb-10 shadow-2xl">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"></span>
-                <span>Enterprise Grade Network Infrastructure</span>
-            </div>
-
-            <!-- Headline -->
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter text-white max-w-5xl mx-auto leading-[1.08] mb-8">
-                Enterprise Network Infrastructure <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-brand-400">Built Right.</span>
-            </h1>
-
-            <!-- Subheadline -->
-            <p class="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto font-normal leading-relaxed tracking-tight mb-12">
-                We engineer bulletproof digital backbones. Specializing in advanced network architecture, structured cabling, high-performance wireless infrastructure, and high-density surveillance systems for modern enterprises.
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
-                <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-xs font-semibold tracking-wider uppercase text-dark-900 transition-all duration-300 bg-white rounded-full hover:bg-slate-200 shadow-2xl hover:scale-105">
-                    Get Free Quote <i class="fa-solid fa-arrow-right ml-2.5 text-xs"></i>
-                </a>
-                <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-xs font-semibold tracking-wider uppercase text-white transition-all duration-300 glass-card rounded-full hover:bg-white/10 hover:border-white/20">
-                    View Projects <i class="fa-solid fa-server ml-2.5 text-brand-400 text-xs"></i>
-                </a>
-            </div>
-
-            <!-- Quick Trust Bar -->
-            <div class="mt-20 pt-12 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-8 text-slate-400 text-xs font-medium tracking-wide uppercase">
-                <div class="flex items-center justify-center space-x-2.5">
-                    <i class="fa-solid fa-shield-halved text-brand-400 text-base"></i>
-                    <span>Cat6A Certified</span>
-                </div>
-                <div class="flex items-center justify-center space-x-2.5">
-                    <i class="fa-solid fa-network-wired text-brand-400 text-base"></i>
-                    <span>Fiber Backbones</span>
-                </div>
-                <div class="flex items-center justify-center space-x-2.5">
-                    <i class="fa-solid fa-wifi text-brand-400 text-base"></i>
-                    <span>Wi-Fi Heat Mapping</span>
-                </div>
-                <div class="flex items-center justify-center space-x-2.5">
-                    <i class="fa-solid fa-video text-brand-400 text-base"></i>
-                    <span>IP Camera Systems</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. Services Section -->
-    <section id="services" class="py-32 bg-dark-900 relative">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-dark-800/40 via-dark-900 to-dark-900 pointer-events-none"></div>
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-brand-400 text-xs font-semibold tracking-widest uppercase mb-4">Core Competencies</h2>
-                <p class="text-4xl sm:text-5xl font-bold text-white tracking-tight">Enterprise Infrastructure Services</p>
-                <p class="mt-5 text-slate-400 text-base tracking-normal">Comprehensive low voltage and network engineering solutions designed for mission-critical reliability, scalability, and zero downtime.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="glass-card rounded-3xl p-10 relative group">
-                    <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-xl mb-8 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">
-                        <i class="fa-solid fa-sitemap"></i>
-                    </div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Network Architecture & Engineering</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8 tracking-tight">Enterprise network design, VLAN configuration, advanced routing, firewall deployment, and robust redundancy mapping.</p>
-                    <ul class="space-y-3 text-xs text-slate-300 font-medium tracking-wide border-t border-white/5 pt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Enterprise Network Design</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Router & Firewall Deployment</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> VLAN Configuration</li>
-                    </ul>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="glass-card rounded-3xl p-10 relative group">
-                    <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-xl mb-8 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">
-                        <i class="fa-solid fa-network-wired"></i>
-                    </div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Structured Cabling & Fiber Optics</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8 tracking-tight">High-performance Cat5e, Cat6, Cat6A copper runs and single-mode/multi-mode fiber optic terminations built for high bandwidth.</p>
-                    <ul class="space-y-3 text-xs text-slate-300 font-medium tracking-wide border-t border-white/5 pt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Cat5e / Cat6 / Cat6A Cabling</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Fiber Optic Splicing & Testing</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Commercial Low Voltage</li>
-                    </ul>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="glass-card rounded-3xl p-10 relative group">
-                    <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-xl mb-8 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">
-                        <i class="fa-solid fa-server"></i>
-                    </div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">MDF/IDF Buildouts & Rack Design</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8 tracking-tight">Professional server room construction, rack installation, immaculate patch panel management, and thermal optimization.</p>
-                    <ul class="space-y-3 text-xs text-slate-300 font-medium tracking-wide border-t border-white/5 pt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> MDF / IDF Room Buildouts</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Rack Design & Installation</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Clean Cable Management</li>
-                    </ul>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="glass-card rounded-3xl p-10 relative group">
-                    <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-xl mb-8 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">
-                        <i class="fa-solid fa-wifi"></i>
-                    </div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Wireless & Access Point Deployment</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8 tracking-tight">Advanced Wi-Fi design, predictive and active heat mapping, high-density access point deployment, and seamless roaming.</p>
-                    <ul class="space-y-3 text-xs text-slate-300 font-medium tracking-wide border-t border-white/5 pt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Wi-Fi Heat Mapping & Surveys</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Managed Access Point Install</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Seamless Enterprise Roaming</li>
-                    </ul>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="glass-card rounded-3xl p-10 relative group">
-                    <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-xl mb-8 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">CCTV & Security Surveillance</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8 tracking-tight">High-definition IP camera systems, NVR configuration, PoE camera infrastructure, and crystal-clear perimeter security.</p>
-                    <ul class="space-y-3 text-xs text-slate-300 font-medium tracking-wide border-t border-white/5 pt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Enterprise IP Camera Systems</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> NVR Configuration & Storage</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Reliable PoE Infrastructure</li>
-                    </ul>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="glass-card rounded-3xl p-10 relative group">
-                    <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-xl mb-8 group-hover:bg-brand-500 group-hover:text-white transition-all duration-500">
-                        <i class="fa-solid fa-toolbox"></i>
-                    </div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Office Buildouts & Troubleshooting</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8 tracking-tight">Complete commercial office buildouts, warehouse networking, rapid fault troubleshooting, and small business IT infrastructure.</p>
-                    <ul class="space-y-3 text-xs text-slate-300 font-medium tracking-wide border-t border-white/5 pt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Commercial Office Buildouts</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Warehouse & Industrial Networks</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Network Troubleshooting</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Why Choose NetWired Solutions -->
-    <section id="why-us" class="py-32 bg-dark-800/40 relative border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-brand-400 text-xs font-semibold tracking-widest uppercase mb-4">Enterprise Standard</h2>
-                    <p class="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-8">Why Industry Leaders Choose NetWired Solutions</p>
-                    <p class="text-slate-400 text-base leading-relaxed mb-12">
-                        We don't just run cables; we architect digital ecosystems. Our engineering teams adhere to strict ANSI/TIA standards, ensuring maximum throughput, minimal signal attenuation, and long-term architectural stability.
-                    </p>
-
-                    <div class="space-y-8">
-                        <div class="flex items-start space-x-5">
-                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-shield-check text-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold tracking-tight text-white mb-1.5">Enterprise-Grade Installations</h3>
-                                <p class="text-sm text-slate-400 tracking-tight">Built using certified hardware, industrial-grade cabling, and rigorous testing protocols for mission-critical uptime.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-5">
-                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-sliders text-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold tracking-tight text-white mb-1.5">Clean Cable Management</h3>
-                                <p class="text-sm text-slate-400 tracking-tight">Flawless velcro dressing, structured horizontal/vertical channels, and zero bird-nests for rapid maintenance.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-5">
-                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-chart-line-up text-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold tracking-tight text-white mb-1.5">Scalable Infrastructure</h3>
-                                <p class="text-sm text-slate-400 tracking-tight">Future-proof designs engineered to expand effortlessly alongside your growing team and bandwidth requirements.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-5">
-                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-file-shield text-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold tracking-tight text-white mb-1.5">Professional Documentation & Support</h3>
-                                <p class="text-sm text-slate-400 tracking-tight">Comprehensive port maps, cable labeling, certification test results, and responsive ongoing support.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="relative mx-auto rounded-3xl overflow-hidden glass-card p-3 border border-white/10 shadow-2xl">
-                        <img src="rack2.jpg" alt="Enterprise Network Rack Installation" class="w-full h-auto rounded-2xl object-cover">
-                    </div>
-                    <!-- Decorative backdrop glow -->
-                    <div class="absolute -top-12 -right-12 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Featured Projects Section -->
-    <section id="projects" class="py-32 bg-dark-900">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-brand-400 text-xs font-semibold tracking-widest uppercase mb-4">Proven Track Record</h2>
-                <p class="text-4xl sm:text-5xl font-bold text-white tracking-tight">Featured Engineering Projects</p>
-                <p class="mt-5 text-slate-400 text-base">A glimpse into recent corporate headquarters, secure facilities, and multi-floor commercial network deployments.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="glass-card rounded-3xl overflow-hidden group">
-                    <div class="relative h-72 overflow-hidden">
-                        <img src="site1.jpg" alt="Corporate HQ Network Buildout" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-                        <span class="absolute top-5 left-5 px-3.5 py-1.5 bg-dark-900/80 backdrop-blur-md text-brand-400 text-xs font-semibold tracking-wide uppercase rounded-full border border-white/10">HQ Buildout</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold tracking-tight text-white mb-2.5">Corporate Headquarters Network</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Complete enterprise-grade structured cabling, dual-redundant core routing, and high-density Wi-Fi deployment across 4 floors.</p>
-                        <div class="flex items-center text-xs font-medium text-brand-400 space-x-2.5 uppercase tracking-wide">
-                            <span>Cat6A & Fiber Backbone</span>
-                            <span>•</span>
-                            <span>Tampa, FL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="glass-card rounded-3xl overflow-hidden group">
-                    <div class="relative h-72 overflow-hidden">
-                        <img src="cctv1.jpg" alt="Surveillance Integration Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-                        <span class="absolute top-5 left-5 px-3.5 py-1.5 bg-dark-900/80 backdrop-blur-md text-brand-400 text-xs font-semibold tracking-wide uppercase rounded-full border border-white/10">Security System</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold tracking-tight text-white mb-2.5">Multi-Facility IP Surveillance</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Deployment of 64+ high-definition PoE security cameras tied into secure NVR arrays with remote monitoring capability.</p>
-                        <div class="flex items-center text-xs font-medium text-brand-400 space-x-2.5 uppercase tracking-wide">
-                            <span>PoE Infrastructure</span>
-                            <span>•</span>
-                            <span>Clearwater, FL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="glass-card rounded-3xl overflow-hidden group">
-                    <div class="relative h-72 overflow-hidden">
-                        <img src="ap1.jpg" alt="Wireless Infrastructure Deployment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-                        <span class="absolute top-5 left-5 px-3.5 py-1.5 bg-dark-900/80 backdrop-blur-md text-brand-400 text-xs font-semibold tracking-wide uppercase rounded-full border border-white/10">Wireless Network</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold tracking-tight text-white mb-2.5">Enterprise Wi-Fi Heat Mapping</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Active site survey and high-density access point deployment ensuring zero dead zones and seamless roaming for 500+ employees.</p>
-                        <div class="flex items-center text-xs font-medium text-brand-400 space-x-2.5 uppercase tracking-wide">
-                            <span>Wi-Fi 6 Architecture</span>
-                            <span>•</span>
-                            <span>St. Petersburg, FL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Our Process Section -->
-    <section id="process" class="py-32 bg-dark-800/40 border-y border-white/5 relative">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-brand-400 text-xs font-semibold tracking-widest uppercase mb-4">Methodology</h2>
-                <p class="text-4xl sm:text-5xl font-bold text-white tracking-tight">Our 6-Step Implementation Process</p>
-                <p class="mt-5 text-slate-400 text-base">A disciplined engineering workflow ensuring flawless project execution from initial concept to ongoing support.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Step 1 -->
-                <div class="glass-card rounded-3xl p-10 relative">
-                    <div class="text-brand-400 text-3xl font-bold tracking-tighter mb-6 opacity-30 font-mono">01</div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Consultation</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">We evaluate your infrastructure requirements, operational goals, bandwidth demands, and physical floor plans.</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="glass-card rounded-3xl p-10 relative">
-                    <div class="text-brand-400 text-3xl font-bold tracking-tighter mb-6 opacity-30 font-mono">02</div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Design</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Our senior engineers blueprint the complete network architecture, cable paths, rack layouts, and security topologies.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="glass-card rounded-3xl p-10 relative">
-                    <div class="text-brand-400 text-3xl font-bold tracking-tighter mb-6 opacity-30 font-mono">03</div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Installation</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Professional pulling, termination, and dressing of copper and fiber cables with immaculate rack construction.</p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="glass-card rounded-3xl p-10 relative">
-                    <div class="text-brand-400 text-3xl font-bold tracking-tighter mb-6 opacity-30 font-mono">04</div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Configuration</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Setup and tuning of switches, routers, firewalls, VLANs, access points, and surveillance NVR systems.</p>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="glass-card rounded-3xl p-10 relative">
-                    <div class="text-brand-400 text-3xl font-bold tracking-tighter mb-6 opacity-30 font-mono">05</div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Testing</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Rigorous Fluke certification testing, bandwidth stress testing, and signal strength verification across all drops.</p>
-                </div>
-
-                <!-- Step 6 -->
-                <div class="glass-card rounded-3xl p-10 relative">
-                    <div class="text-brand-400 text-3xl font-bold tracking-tighter mb-6 opacity-30 font-mono">06</div>
-                    <h3 class="text-xl font-bold tracking-tight text-white mb-3">Support</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Handover of complete documentation, port maps, and ongoing SLA support to keep your operations running smoothly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Gallery Section -->
-    <section id="gallery" class="py-32 bg-dark-900">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-brand-400 text-xs font-semibold tracking-widest uppercase mb-4">Visual Showcase</h2>
-                <p class="text-4xl sm:text-5xl font-bold text-white tracking-tight">Engineering Gallery</p>
-                <p class="mt-5 text-slate-400 text-base">Explore our portfolio of structured cabling, server racks, surveillance units, and enterprise site deployments.</p>
-            </div>
-
-            <!-- Masonry / Grid Gallery -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Item 1 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('rack1.jpg', 'Enterprise Network Rack')">
-                    <img src="rack1.jpg" alt="Enterprise Network Rack" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> Network Rack Architecture</span>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('rack2.jpg', 'Server Room Buildout')">
-                    <img src="rack2.jpg" alt="Server Room Buildout" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> Server Room Buildout</span>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('cctv1.jpg', 'IP Surveillance System')">
-                    <img src="cctv1.jpg" alt="IP Surveillance System" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> IP Surveillance System</span>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('cctv2.jpg', 'Security Camera Installation')">
-                    <img src="cctv2.jpg" alt="Security Camera Installation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> Security Camera Installation</span>
-                    </div>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('ap1.jpg', 'Wireless Access Point')">
-                    <img src="ap1.jpg" alt="Wireless Access Point" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> Wireless Access Point</span>
-                    </div>
-                </div>
-
-                <!-- Item 6 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('ap2.jpg', 'Enterprise Wi-Fi Deployment')">
-                    <img src="ap2.jpg" alt="Enterprise Wi-Fi Deployment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> Enterprise Wi-Fi Deployment</span>
-                    </div>
-                </div>
-
-                <!-- Item 7 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('cable1.jpg', 'Structured Copper & Fiber Cabling')">
-                    <img src="cable1.jpg" alt="Structured Copper & Fiber Cabling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> Structured Copper & Fiber Cabling</span>
-                    </div>
-                </div>
-
-                <!-- Item 8 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('nvr1.jpg', 'NVR & Server Hardware')">
-                    <img src="nvr1.jpg" alt="NVR & Server Hardware" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> NVR & Server Hardware</span>
-                    </div>
-                </div>
-
-                <!-- Item 9 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72" onclick="openLightbox('website1.jpg', 'Network Operations Center')">
-                    <img src="website1.jpg" alt="Network Operations Center" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> Network Operations Center</span>
-                    </div>
-                </div>
-
-                <!-- Item 10 -->
-                <div class="glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-72 sm:col-span-2 lg:col-span-3" onclick="openLightbox('site1.jpg', 'Full Site Infrastructure Deployment')">
-                    <img src="site1.jpg" alt="Full Site Infrastructure Deployment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-xs font-semibold tracking-wide uppercase text-white flex items-center"><i class="fa-solid fa-magnifying-glass-plus mr-2.5 text-brand-400"></i> Full Site Infrastructure Deployment</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center p-6">
-        <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white/70 hover:text-white text-2xl focus:outline-none transition-colors">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="max-w-6xl max-h-[90vh] relative">
-            <img id="lightbox-img" src="" alt="Enlarged View" class="max-w-full max-h-[80vh] object-contain rounded-2xl border border-white/10 shadow-2xl">
-            <p id="lightbox-caption" class="text-center text-slate-400 mt-6 text-xs font-semibold uppercase tracking-widest"></p>
-        </div>
-    </div>
-
-    <!-- 7. Statistics Section -->
-    <section class="py-24 bg-dark-800/60 border-y border-white/5 relative">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div class="glass-card rounded-3xl p-10">
-                    <div class="text-4xl sm:text-6xl font-bold tracking-tighter text-white mb-2">100+</div>
-                    <div class="text-xs font-semibold uppercase tracking-widest text-slate-400">Projects Completed</div>
-                </div>
-                <div class="glass-card rounded-3xl p-10">
-                    <div class="text-4xl sm:text-6xl font-bold tracking-tighter text-white mb-2">Thousands</div>
-                    <div class="text-xs font-semibold uppercase tracking-widest text-slate-400">Feet of Cable Installed</div>
-                </div>
-                <div class="glass-card rounded-3xl p-10">
-                    <div class="text-4xl sm:text-6xl font-bold tracking-tighter text-white mb-2">99%</div>
-                    <div class="text-xs font-semibold uppercase tracking-widest text-slate-400">Client Satisfaction</div>
-                </div>
-                <div class="glass-card rounded-3xl p-10">
-                    <div class="text-4xl sm:text-6xl font-bold tracking-tighter text-white mb-2">Tampa Bay</div>
-                    <div class="text-xs font-semibold uppercase tracking-widest text-slate-400">Primary Service Area</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. FAQ Section -->
-    <section id="faq" class="py-32 bg-dark-900">
-        <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="text-center mb-20">
-                <h2 class="text-brand-400 text-xs font-semibold tracking-widest uppercase mb-4">Got Questions?</h2>
-                <p class="text-4xl sm:text-5xl font-bold text-white tracking-tight">Frequently Asked Questions</p>
-                <p class="mt-5 text-slate-400 text-base">Everything you need to know about our low voltage and network engineering services.</p>
-            </div>
-
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <div class="glass-card rounded-2xl overflow-hidden">
-                    <button class="w-full px-8 py-6 text-left font-semibold tracking-tight text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>What regions do you service?</span>
-                        <i class="fa-solid fa-chevron-down text-brand-400 text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div class="hidden px-8 pb-6 text-sm text-slate-400 leading-relaxed">
-                        Our primary service area is the Tampa Bay region and surrounding commercial sectors in Florida. We handle office buildouts, warehouse networks, and enterprise deployments across the state.
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="glass-card rounded-2xl overflow-hidden">
-                    <button class="w-full px-8 py-6 text-left font-semibold tracking-tight text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>Do you provide structured cabling certification?</span>
-                        <i class="fa-solid fa-chevron-down text-brand-400 text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div class="hidden px-8 pb-6 text-sm text-slate-400 leading-relaxed">
-                        Yes. All copper (Cat5e/Cat6/Cat6A) and fiber optic runs are thoroughly tested using enterprise-grade Fluke testers, and full test result documentation is provided upon project completion.
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="glass-card rounded-2xl overflow-hidden">
-                    <button class="w-full px-8 py-6 text-left font-semibold tracking-tight text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>Are you experienced with MDF/IDF room buildouts?</span>
-                        <i class="fa-solid fa-chevron-down text-brand-400 text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div class="hidden px-8 pb-6 text-sm text-slate-400 leading-relaxed">
-                        Absolutely. We specialize in complete server room construction, rack assembly, wall mounts, ladder rack installation, patch panel termination, and meticulous vertical/horizontal cable management.
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="glass-card rounded-2xl overflow-hidden">
-                    <button class="w-full px-8 py-6 text-left font-semibold tracking-tight text-white flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span>Can you install security cameras and Wi-Fi systems together?</span>
-                        <i class="fa-solid fa-chevron-down text-brand-400 text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div class="hidden px-8 pb-6 text-sm text-slate-400 leading-relaxed">
-                        Yes, we provide full turnkey low voltage integration. This includes managed PoE switch configuration, high-density access point deployments with heat mapping, and enterprise IP camera/NVR surveillance installations.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. Large CTA Section -->
-    <section class="py-24 relative overflow-hidden bg-dark-900 border-t border-white/5">
-        <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
-            <div class="glass-card rounded-3xl p-12 sm:p-20 border border-white/10 shadow-2xl relative overflow-hidden">
-                <div class="absolute -top-32 -left-32 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                <h2 class="text-4xl sm:text-6xl font-bold tracking-tighter text-white mb-6">
-                    Ready to Build Your Network?
-                </h2>
-                <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Partner with Tampa Bay's premier network infrastructure and low voltage experts. Contact us today for a free project consultation and quote.
-                </p>
-                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-xs font-semibold tracking-wider uppercase text-dark-900 transition-all duration-300 bg-white rounded-full hover:bg-slate-200 shadow-2xl hover:scale-105">
-                    Schedule Your Consultation <i class="fa-solid fa-arrow-right ml-2.5 text-xs"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. Contact Section (Updated with Modern Apple-Like UI, Spacing, and Specified Contact Info) -->
-    <section id="contact" class="py-32 bg-dark-900 relative">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                
-                <!-- Contact Information & Details (5 Columns) -->
-                <div class="lg:col-span-5 space-y-10">
-                    <div>
-                        <h2 class="text-brand-400 text-xs font-semibold tracking-widest uppercase mb-4">Get in Touch</h2>
-                        <p class="text-4xl font-bold tracking-tight text-white mb-6">Let's Discuss Your Infrastructure</p>
-                        <p class="text-slate-400 text-base leading-relaxed">
-                            Whether you need a full data center rack buildout, structured cabling for a new office, or an upgraded security camera system, our engineering team is ready to assist.
-                        </p>
-                    </div>
-
-                    <div class="space-y-6 pt-4">
-                        <!-- Email -->
-                        <div class="glass-card rounded-2xl p-6 flex items-center space-x-5">
-                            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-base flex-shrink-0">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-[10px] font-semibold tracking-widest text-slate-500 uppercase mb-1">Email Us</h3>
-                                <a href="mailto:contactnetwiredsolutions@gmail.com" class="text-sm font-semibold text-white hover:text-brand-400 transition-colors tracking-tight">contactnetwiredsolutions@gmail.com</a>
-                            </div>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="glass-card rounded-2xl p-6 flex items-center space-x-5">
-                            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-base flex-shrink-0">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-[10px] font-semibold tracking-widest text-slate-500 uppercase mb-1">Call Us</h3>
-                                <a href="tel:8133654815" class="text-sm font-semibold text-white hover:text-brand-400 transition-colors tracking-tight">813-365-4815</a>
-                            </div>
-                        </div>
-
-                        <!-- Service Area -->
-                        <div class="glass-card rounded-2xl p-6 flex items-center space-x-5">
-                            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400 text-base flex-shrink-0">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-[10px] font-semibold tracking-widest text-slate-500 uppercase mb-1">Service Area</h3>
-                                <p class="text-sm font-semibold text-white tracking-tight">Tampa Bay, FL & Surrounding Areas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formspree Form (7 Columns - Apple Minimalist Clean Card Design) -->
-                <div class="lg:col-span-7">
-                    <div class="glass-card rounded-3xl p-10 sm:p-12 border border-white/10 shadow-2xl">
-                        <h3 class="text-2xl font-bold tracking-tight text-white mb-2">Request a Free Quote</h3>
-                        <p class="text-slate-400 text-xs uppercase tracking-wider mb-8">Fill out the form below and we will respond promptly.</p>
-                        
-                        <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-xs font-semibold tracking-wider uppercase text-slate-400 mb-2.5">Your Name</label>
-                                <input type="text" id="name" name="name" required class="w-full px-5 py-4 rounded-xl bg-dark-900/80 border border-white/10 text-white placeholder-slate-600 text-sm focus:border-brand-400 focus:ring-1 focus:ring-brand-400 outline-none transition-all" placeholder="John Doe">
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="email" class="block text-xs font-semibold tracking-wider uppercase text-slate-400 mb-2.5">Email Address</label>
-                                    <input type="email" id="email" name="email" required class="w-full px-5 py-4 rounded-xl bg-dark-900/80 border border-white/10 text-white placeholder-slate-600 text-sm focus:border-brand-400 focus:ring-1 focus:ring-brand-400 outline-none transition-all" placeholder="john@company.com">
-                                </div>
-                                <div>
-                                    <label for="phone" class="block text-xs font-semibold tracking-wider uppercase text-slate-400 mb-2.5">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" class="w-full px-5 py-4 rounded-xl bg-dark-900/80 border border-white/10 text-white placeholder-slate-600 text-sm focus:border-brand-400 focus:ring-1 focus:ring-brand-400 outline-none transition-all" placeholder="813-365-4815">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="message" class="block text-xs font-semibold tracking-wider uppercase text-slate-400 mb-2.5">Project Details</label>
-                                <textarea id="message" name="message" rows="5" required class="w-full px-5 py-4 rounded-xl bg-dark-900/80 border border-white/10 text-white placeholder-slate-600 text-sm focus:border-brand-400 focus:ring-1 focus:ring-brand-400 outline-none transition-all resize-none" placeholder="Tell us about your structured cabling or network infrastructure needs..."></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full py-4 text-xs font-semibold tracking-wider uppercase text-dark-900 bg-white rounded-xl hover:bg-slate-200 transition-all duration-300 shadow-lg">
-                                Submit Request
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 11. Footer -->
-    <footer class="bg-dark-900 border-t border-white/5 py-16 text-slate-400 text-xs">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center space-x-3">
-                <img src="logo.png" alt="NetWired Solutions Logo" class="h-7 w-auto object-contain">
-                <span class="text-white font-bold tracking-tight">NetWired Solutions</span>
-            </div>
-            
-            <p class="text-slate-600 text-center md:text-left tracking-tight">
-                &copy; 2026 NetWired Solutions. All rights reserved. Enterprise Network Infrastructure & Low Voltage Systems.
-            </p>
-
-            <div class="flex space-x-8 text-xs font-medium tracking-wide uppercase">
-                <a href="#services" class="hover:text-white transition-colors">Services</a>
-                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Vanilla JavaScript for Mobile Menu, Lightbox, & FAQ Accordion -->
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-2xl', 'bg-dark-900/90');
-            } else {
-                navbar.classList.remove('shadow-2xl', 'bg-dark-900/90');
-            }
-        });
-
-        // Lightbox Functions
-        function openLightbox(src, caption) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxCaption = document.getElementById('lightbox-caption');
-
-            lightboxImg.src = src;
-            lightboxCaption.textContent = caption;
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('flex');
-            lightbox.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close lightbox on background click
-        document.getElementById('lightbox').addEventListener('click', (e) => {
-            if (e.target.id === 'lightbox') {
-                closeLightbox();
-            }
-        });
-
-        // FAQ Accordion Toggle
-        function toggleFaq(button) {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('i');
-            
-            content.classList.toggle('hidden');
-            if (icon) {
-                icon.classList.toggle('rotate-180');
-            }
-        }
-    </script>
-</body>
-</html>
+<body>
+<div class="topline"></div>
+<header><div class="wrap nav">
+<a class="brand" href="#top" aria-label="NetWired Solutions, back to top"><span class="mark">N</span><span>NETWIRED <strong>SOLUTIONS</strong></span></a>
+<button class="menu" id="menu" aria-expanded="false" aria-controls="links" aria-label="Toggle navigation">☰</button>
+<nav class="links" id="links" aria-label="Main navigation">
+<a href="#services">Services</a><a href="#approach">About</a><a href="#work">Our Work</a><a href="#contact">Contact</a><a class="nav-cta" href="#contact">Request a Quote ↗</a>
+</nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-inner">
+<div class="hero-copy">
+<div class="eyebrow">Tampa Bay · Network & Low-Voltage Services</div>
+<h1>Better networks.<br><em>Less guesswork.</em></h1>
+<p>From the first cable run to the final switch configuration, NetWired Solutions installs the infrastructure that keeps your business connected, secure, and ready to grow.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#contact">Discuss Your Project <span>↗</span></a><a class="btn btn-outline" href="#services">Explore Services <span>↓</span></a></div>
+</div>
+<div class="hero-picture"><div class="fallback-photo" aria-hidden="true"><div class="graphic">N</div></div><img src="rack1.jpg" alt="Network rack and structured cabling" onerror="this.style.display='none'"><div class="photo-note">Network infrastructure, done properly.<span>Planning · Installation · Configuration</span></div></div>
+</div></section>
+<div class="strip"><div class="wrap strip-inner"><span class="strip-title">What we work on</span><span class="strip-item"><i class="tiny-square"></i>Network Equipment</span><span class="strip-item"><i class="tiny-square"></i>Structured Cabling</span><span class="strip-item"><i class="tiny-square"></i>Business Wi-Fi</span><span class="strip-item"><i class="tiny-square"></i>IP Surveillance</span></div></div>
+<section class="section" id="services"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow blue">01 / Capabilities</div><h2>What we do.</h2></div><p>One point of contact for the physical network, the devices connected to it, and the configuration behind it.</p></div>
+<div class="service-list">
+<div class="service"><span class="num">01</span><h3>Network Design & Configuration</h3><p>Switches, gateways, firewalls, VLANs, DHCP, and network segmentation for offices and other connected spaces.</p><span class="arrow">↗</span></div>
+<div class="service"><span class="num">02</span><h3>Structured Cabling</h3><p>Ethernet cable runs, terminations, patch panels, labeling, and clean, serviceable cable management.</p><span class="arrow">↗</span></div>
+<div class="service"><span class="num">03</span><h3>Wi-Fi & Access Points</h3><p>Wireless coverage planning, access point placement, PoE switching, and business and guest wireless networks.</p><span class="arrow">↗</span></div>
+<div class="service"><span class="num">04</span><h3>IP Cameras & Surveillance</h3><p>PoE camera installations, network video recorders, storage configuration, and remote viewing setup.</p><span class="arrow">↗</span></div>
+<div class="service"><span class="num">05</span><h3>Rack & Network Closet Setup</h3><p>Switch and patch panel installation, equipment organization, cable cleanup, and network closet upgrades.</p><span class="arrow">↗</span></div>
+<div class="service"><span class="num">06</span><h3>Troubleshooting & Upgrades</h3><p>Intermittent connectivity, damaged cabling, device communication issues, network refreshes, and equipment replacements.</p><span class="arrow">↗</span></div>
+</div></div></section>
+<section class="section intro" id="approach"><div class="wrap intro-layout">
+<div><div class="eyebrow blue">02 / Our Approach</div><h2>The details make the difference.</h2><p>A network can look fine on paper and still be a headache to maintain. We focus on the work that matters after installation too: <strong>thoughtful equipment placement, properly organized cabling, sensible network configuration, and an installation that someone else can actually service.</strong></p><p>Whether you're fitting out a new space, extending an existing network, or fixing an installation that never worked quite right, we start by understanding the site and what you need it to do.</p><div class="checkline">Built to work today. Organized for whatever comes next. ↗</div></div>
+<div class="intro-image"><img src="rack2.jpg" alt="Organized network equipment inside a rack" onerror="this.style.display='none'"></div>
+</div></section>
+<section class="section work" id="work"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow" style="color:#8eb8ff">03 / In the Field</div><h2>Work, not buzzwords.</h2></div><p>A look at the equipment and installation work behind the services we offer.</p></div>
+<div class="work-grid">
+<div class="work-card"><img src="site1.jpg" alt="Network installation project" loading="lazy" onerror="this.style.display='none'"><div><small>Infrastructure</small><h3>Wired networks & site installations</h3></div></div>
+<div class="work-card"><img src="cctv1.jpg" alt="IP security camera installation" loading="lazy" onerror="this.style.display='none'"><div><small>Surveillance</small><h3>Security cameras & PoE</h3></div></div>
+<div class="work-card"><img src="ap1.jpg" alt="Wireless access point installation" loading="lazy" onerror="this.style.display='none'"><div><small>Wireless</small><h3>Access points & coverage</h3></div></div>
+</div><p class="work-note">Replace these image filenames with photos from your own completed projects before publishing. Project descriptions are intentionally general rather than claiming unverified client work.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow blue">04 / How We Work</div><h2>Simple process.<br>Solid execution.</h2></div></div>
+<div class="advantages">
+<div class="adv"><span class="index">01 / Understand</span><h3>Walk the site</h3><p>We discuss the existing setup, your goals, and any physical or technical limitations before proposing a direction.</p></div>
+<div class="adv"><span class="index">02 / Build</span><h3>Install with purpose</h3><p>Equipment, cable routing, terminations, and configuration are handled with reliability and maintenance in mind.</p></div>
+<div class="adv"><span class="index">03 / Verify</span><h3>Test before handoff</h3><p>We check connections and device functionality, then walk through the finished setup and any next steps.</p></div>
+</div></div></section>
+<section class="section contact" id="contact"><div class="wrap contact-grid">
+<div><div class="eyebrow blue">05 / Get In Touch</div><h2>Have a project in mind?</h2><p>New office, network upgrade, cameras, or a connectivity issue you can't seem to pin down—tell us what you're working on and we'll talk through the next step.</p>
+<a class="contact-method" href="mailto:contactnetwiredsolutions@gmail.com"><small>Email</small>contactnetwiredsolutions@gmail.com ↗</a>
+<a class="contact-method" href="tel:+18133654815"><small>Phone</small>(813) 365-4815 ↗</a>
+<div class="contact-method"><small>Based in</small>Tampa Bay, Florida</div>
+</div>
+<div class="form-shell"><h3>Tell us about the job.</h3><p>Use the form to draft an email to NetWired Solutions.</p>
+<form id="quoteForm"><div class="fields">
+<div class="field"><label for="name">Your name *</label><input id="name" name="name" required autocomplete="name"></div>
+<div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+<div class="field full"><label for="service">What do you need help with?</label><select id="service" name="service"><option>Network installation or upgrade</option><option>Structured cabling</option><option>Business Wi-Fi</option><option>Security cameras</option><option>Network troubleshooting</option><option>Something else</option></select></div>
+<div class="field full"><label for="message">Project details *</label><textarea id="message" name="message" required placeholder="A little about the site, scope, and what you'd like to get done..."></textarea></div>
+</div><button class="btn btn-primary" type="submit">Open Email Draft ↗</button><p class="form-foot">This opens your email app with your details filled in. It doesn't submit to a website database.</p></form>
+</div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><a class="brand" href="#top"><span class="mark">N</span><span>NETWIRED <strong>SOLUTIONS</strong></span></a><p>© <span id="year">2026</span> NetWired Solutions · Network infrastructure & low-voltage installations · Tampa Bay, FL</p></div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('quoteForm').addEventListener('submit',e=>{
+e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;
+const name=f.elements.name.value.trim(),email=f.elements.email.value.trim(),service=f.elements.service.value,message=f.elements.message.value.trim();
+const subject='NetWired Solutions inquiry — '+service;
+const body=`Name: ${name}\nEmail: ${email}\nService: ${service}\n\nProject details:\n${message}`;
+window.location.href='mailto:contactnetwiredsolutions@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+});
+</script>
+</body></html>
